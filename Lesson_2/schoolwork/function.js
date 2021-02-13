@@ -23,7 +23,7 @@ const sayHello = () => {
     console.log("Hello");
 }
 
-//  do the sam but this time it should say "Hello"
+// do the same but this time it should say "Hello"
 sayHiLater(sayHello);
 
 // interact with functions and string 

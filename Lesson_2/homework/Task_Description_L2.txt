@@ -1,0 +1,3 @@
+Design your REST API and hand-in an implementation for GET. 
+
+You can choose any noun that your API does CRUD on.

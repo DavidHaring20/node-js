@@ -1,0 +1,6 @@
+Last updated: 13.02.2021.
+
+GENERAL 
+Each lesson is folder for itself. There are 2 more folders in each lesson. One folder is for work done in 
+school/during the lecture and it is in folder called "schoolwork". Second folder is for work which must be done at home 
+or some exercises I decided to do myself. It is called "homework".
