@@ -1,0 +1,50 @@
+LESSON 1 
+First part of the lesson was concentrated on installing Node js and getting it ready for use and getting some kind of basic understanding what Node js is.
+Furthermore, we have learned why is it used and most importantly where it is used. 
+During the second part of the first lesson we have had basic exercises which were crucial to be able to write Javascript code.
+We have mostly concentrated on Data types such as: Strings, Objects and Arrays. There were different exercises for 
+every Data type, but in general they were about Data manipulation and basic methods for that kind of Data. 
+For example: 
+    - Strings: showing the number with specified number of decimals(.toFixed()), getting the letter at specified index(.charAt()), 
+        replacing the letter at specified index(.replace())...
+    - Arrays: outputting the letter at the specified index using the console log(name_of_array[]), creating and populating the array, 
+        searching for a specific number(.indexOf())...
+    - Objects: initializing the objects, trying to output through console log some property of the object, removing the property of 
+        some object using "delete" keyword...
+After we have had some code which could be ran, we have then learned how to run that code. We used command "node <file name>". 
+But, needless to say, it would only work once the terminal was in the right directory where the file with the <file name> could be found.
+
+LESSON 2 
+Lesson 2 had a steeper learning curve and was more challenging than the 1. lesson. During the 2. lesson, we have came across few different topics:
+    - functions
+    - callback functions
+    - hoisting
+    - REST APIs
+We have learned how to write functions, how to define them and how to call them. Then, we have learned how to write functions which can take arguments and later, 
+we have learned how to write callback functions. At the end of the lesson we have had brief introduction into server production and Express. We have seen how the 
+GET Http Request is written for server side. 
+
+LESSON 3 
+Lesson 3 was concentrated aroud variables and Express. First part of the lesson, was about variables and second one was about Server.
+During the first part of the lesson, we have covered: 
+    - strict mode = restricted variant of JavaScript, thereby implicitly opting-out of "sloppy mode". Strict mode isn't just a subset: it intentionally has different semantics from normal code.
+    - variable declaration 
+    - object immutability
+    - comparing
+    - scopes
+    - why not to use let in for-loop
+In the second part of the lesson, we have worked on Server. We have made new Server from Scratch and we have made few simple 
+GET requests and method which responds to that GET Request. We have learned more about:
+    - node modules folder
+    - package.json 
+    - package-lock.json
+    - Express 
+    - Nodemon 
+    - Semantic Versioning
+To gain complete understanding, we have then learned more about "npm install" and various ways to add dependencies to our package.json file.
+There are 3 different ways to instantiate the variable: 
+    - var(variable) - can be uptaded and re-declared
+    - let(let something to happen) - can be updated, but not re-declared
+    - const(constant) - can't be updated or redeclared 
+As a general rule, use let as much as possible and var only on ocasssions. Use const when you are sure something won't be changed or updated.
+USE "let" IN FOR LOOPS. IF YOU USE "var" I WILL PRODUCE SOME ERRORS, BUT IF YOU USE "const" IT WON'T WORK, BECAUSE "const" CAN'T BE UPDATED OR RE-DECLARED.
