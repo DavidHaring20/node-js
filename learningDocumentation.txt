@@ -11,8 +11,8 @@ For example:
         searching for a specific number(.indexOf())...
     - Objects: initializing the objects, trying to output through console log some property of the object, removing the property of 
         some object using "delete" keyword...
-After we have had some code which could be ran, we have then learned how to run that code. We used command "node <file name>". 
-But, needless to say, it would only work once the terminal was in the right directory where the file with the <file name> could be found.
+After we have had some code which could be ran, we have then learned how to run that code. We used command "node <file_name>". 
+But, needless to say, it would only work once the terminal was in the right directory where the file with the <file_name> could be found.
 
 LESSON 2 
 Lesson 2 had a steeper learning curve and was more challenging than the 1. lesson. During the 2. lesson, we have came across few different topics:
@@ -41,6 +41,11 @@ GET requests and method which responds to that GET Request. We have learned more
     - Express 
     - Nodemon 
     - Semantic Versioning
+We have also installed Nodemon. It is an extension which auto re-runs the script -> it presses Ctrl + C for us and runs it again. It 
+is made so that it detects changes in the file/directory it has been called upon. We installed it by writing: 
+    $ nodemon -g install
+And we can use it by writing: 
+    $ nodemon <file_name>
 To gain complete understanding, we have then learned more about "npm install" and various ways to add dependencies to our package.json file.
 There are 3 different ways to instantiate the variable: 
     - var(variable) - can be uptaded and re-declared

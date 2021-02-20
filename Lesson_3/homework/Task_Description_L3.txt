@@ -1,0 +1,5 @@
+Create a new server. That should contain routes that give you:
+
+• The time
+• The day
+• The month
