@@ -53,3 +53,28 @@ There are 3 different ways to instantiate the variable:
     - const(constant) - can't be updated or redeclared 
 As a general rule, use let as much as possible and var only on ocasssions. Use const when you are sure something won't be changed or updated.
 USE "let" IN FOR LOOPS. IF YOU USE "var" I WILL PRODUCE SOME ERRORS, BUT IF YOU USE "const" IT WON'T WORK, BECAUSE "const" CAN'T BE UPDATED OR RE-DECLARED.
+
+LESSON 4
+In lesson 4, which was "split" into 3 recognizable parts, we could distinguish them like this:
+    - 1. Homework part
+    - 2. Loops and functional approach to Loops
+    - 3. Work on server(POST Http Method)
+     During the first part we have gone over the homework. Thing that I have learned is that visual studio was made by an American and therefore,
+their Date object and method .getDay returns Integer/Number. That number is index number of the day it got from Date(). It starts from 0, but the days
+start from "Sunday", "Monday", "Tuesday" and so on. I "solved" the issue of that by having the day - 1. It was working because I was testing it on Saturdays and Mondays. 
+If I would test it on Sunday, it would not work(0 - 1 = -1) and there is no array with -1 index position.
+    During the second part of the lecture, we have been talking and learning about functional approaches, lambda functions and loops. We have spoken about filter, reduce and find 
+as approaches we will be using from now on when we are working with loops. We have covered .map and it was thoroughly explained to us.
+    - .map() - It is a method which returns new array populated with the results of the older array on which this method was called. Main difference is that these results could have been
+    modified, as .map usually contains some callback inside of parethenses.
+    Example:
+    const array1 = [1, 4, 9, 16];
+    // pass a function to map
+    const map1 = array1.map(x => x * 2);
+    console.log(map1);
+    // expected output: Array [2, 8, 18, 32]
+    During the third part of the lesson, we have done some work with servers. New, main things we have done is:
+    - passing the HTML code inside of response.
+    - getting the URl that we have typed in and single parameter 
+    - getting the URL that we typed with multiple parameters
+    - POST Http Method
