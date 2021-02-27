@@ -8,8 +8,8 @@ const minutesNow = now.getMinutes();
 const secondsNow = now.getSeconds();
 
 // VARIABLES FOR GETTING DAY
-const dayNow = now.getDay() - 1;
-const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const dayNow = now.getDay();
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const nameOfTheDay = days[dayNow];
 
 // VARIABLES FOR GETTING MONTH
