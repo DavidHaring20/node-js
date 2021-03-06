@@ -78,3 +78,40 @@ as approaches we will be using from now on when we are working with loops. We ha
     - getting the URl that we have typed in and single parameter 
     - getting the URL that we typed with multiple parameters
     - POST Http Method
+
+LESSON 5 
+Lesson 5 was the most interesting lesson. I am not saying that all other lessons were less interesting. I am only saying that this lesson was something else.
+Firstly we have covered CRUD API, then we have covered making some JSON files and reading from it. Then we have covered serving web pages with Express and Node js.
+During the first part, we have came across CRUD API. We have been learning about HTTP Methods:
+    - GET
+    - POST
+    - DELETE 
+    - PUT 
+    - PATCH 
+Get, Post, Delete methods were pretty straightforward. New thing that I learned was that both PUT and PATCH are used when we are updating, but big difference is that the 
+PUT is used when we are updating existing source ENTIRELY. PATCH is used when we are updating existing source PARTLY.
+Next, we have covered how to create JSON file and write in JSON format. Firslty, we need to create new file which will be called "newFile".
+We create it and add it extension: ".json" so it looks like this: newFile.json. Now, when we open it, we need to write pair of curly braces: {} and then write something in it.
+{
+    "name": "David",
+    "age": 20,
+    "feeling": "good"
+}
+Now we can save it and we can create new const or let in some other javascript file and require the file location of that newFile.json.
+Something like this:
+    const getMyJSONinput = require('/path/to/newFile.txt');
+If we want to print it out we can just do:
+    console.log(getMyJSONinput);
+At the end, we were doing Serving the HTML files or webpages with Express. 
+We started by doing the same setup as always, package.json -> fill with Express dependency -> npm install -> creaet app.js -> 
+fill it with code which will take express, setup express app and listening. But now, firslty we needed to create a Html file. 
+Then we wrote app.get method. Let's say we create index.html file and when we don't pass any parameter it will serve us with index.html.
+It looks something like this:
+
+app.get("/", (req, res) => {
+    res.send(__dirname + "/index.html");
+});
+
+__dirname = is an environment variable that tells you the absolute path of the directory containing the currently executing file.
+
+This concluded lesson 5 and next time we are supposed to learn how to pass the CSS alongside the HTML.
