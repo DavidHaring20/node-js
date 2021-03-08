@@ -5,8 +5,164 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 1</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <h1>Welcome to Lesson 1</h1>
+
+    <ul>
+        <li>
+            <a href="./home.html">Home</a>
+        </li>
+        <li>
+            <a href="./lesson_1.html">Lesson 1</a>
+        </li>
+        <li>
+            <a href="./lesson_2.html">Lesson 2</a>
+        </li>
+        <li>
+            <a href="./lesson_3.html">Lesson 3</a>
+        </li>
+        <li>
+            <a href="./lesson_4.html">Lesson 4</a>
+        </li>
+        <li>
+            <a href="./lesson_5.html">Lesson 5</a>
+        </li>
+    </ul>
+
+    <div class="lesson-1-body">
+        <div>
+            <h2>Getting started</h2>
+
+            <h3>What is Node.js ?</h3>
+
+            <p>Node.js is open source, cross-platform, runtime environment that runs on V8 engine and can be executed
+                outside of the web browser. It is based on JavaScript and we can say that it is server-side orientated.
+            </p>
+        
+            <h3>How to start it ?</h3>
+
+            <p>Firstly, we need an IDE. I chose Visual Studio as it is well optimized for Node.js. After we download it,
+                we can open the IDE and head straight to the terminal. Firstly, we need to check if there is already Node.js 
+                installed on our PC:
+            </p>
+
+            <span>$ node -v</span>
+
+            <p>If you don't have any version go here to <a href="https://nodejs.org/en/download/">download Node.js</a>. 
+                Just choose LTS version and follow installation steps. Once it is downloaded, re-enter the the command 
+                from above. This is the wanted output: 
+            </p>
+
+            <span>$ v14.15.1</span>
+
+            <p>Once you got this output or some other version, congratulations, you did it.</p>
+
+            <h3>JavaScript exercises</h3>
+            
+            <strong>Exercise - Add numbers from string to float</strong>
+            <pre>
+                const numberOne = "1.10";
+                const numberTwo = "2.30";
+                const result = parseFloat(numberOne) + parseFloat(numberTwo);<br>
+                console.log(result);
+
+                // Expected output: 3.40
+            </pre>
+
+            <strong>Exercise - Define an object</strong>
+            <pre>
+                const myObject = {
+                    "name" : "David",
+                    "age" : 20  
+                }
+                console.log("I am " + myObject.name + " and I am " + myObject.age + " years old.");
+                
+                // Expected output: I am David and I am 20 years old.
+            </pre> 
+        
+            <strong>Exercise - Add a property</strong>
+            <pre>
+                const stackOverflow = {};
+                stackOverflow.isAllowed = true;
+                console.log(stackOverflow.isAllowed);
+
+                // Expected output: true
+            </pre>
+
+            <strong>Exercise - Remove a property</strong>
+            <pre>
+                const thisSong = {
+                    "description": "The best song in the world."
+                }
+                delete thisSong.description;
+                console.log(thisSong.description);
+
+                // Expected output: undefined
+            </pre>
+
+            <strong>Exercise - Populate Array</strong>
+            <pre>
+                const friends = [];
+                friends.push("Joe");
+                friends.push("Johny");
+                friends.push("Jack");
+                friends.push("Julius");
+                console.log(friends);
+
+                // Expected output: [ 'Joe', 'Johny', 'Jack', 'Julius' ]
+            </pre>
+
+            <strong>Exercise - Get the index of the first occurence of some value</strong>
+            <pre>
+                const significantMathNumbers = [0, 2.718, 3.14159, 1729];
+                console.log(significantMathNumbers.indexOf(1729));
+
+                // Expected output: 3
+            </pre>
+
+            <strong>Exercise - For loop</strong>
+            <pre>
+                const numbers  = [5, 3, 2, 7, 11, 12, 0, -20, 6];
+                const discardedNumbers = [];
+
+                for (let i = 0; i < numbers.length; i++) {
+                    
+                    let number = numbers[i];
+                    
+                    if (number < 0 || number > 6) {
+                        console.log(number);
+                    } else {
+                        discardedNumbers.push(number)
+                    }
+                }
+                console.log("Discarded numbers: " + discardedNumbers); 
+
+                // Expected output: 7 11 12 -20
+                                    Discarded numbers: 5,3,2,0,6
+            </pre>
+
+            <h3>How do you start Node.js ?</h3>
+
+            <p>Let's say that this is the look of our folder.</p>
+
+            <pre>
+                /path/to/- dir0  
+                        |- dir1
+                        |- dir2 - myJsFile.js
+                        |- dir3 
+            </pre>
+
+            <p>If we would like to run our file(myJsFile.js), we firstly need to get into that directory.</p>
+
+            <span>cd /path/to/dir2</span>
+
+            <p>Now, we are in the same directory as our wanted .js file. Now we use command node &lt;file_name&gt;</p>
+            
+            <span>node myJsFile.js</span>
+        </div>
+
+    </div>
 </body>
 </html>
