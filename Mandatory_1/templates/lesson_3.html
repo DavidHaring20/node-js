@@ -30,5 +30,140 @@
             <a href="./lesson_5.html">Lesson 5</a>
         </li>
     </ul>
+
+    <h3>Strict mode</h3>
+    <p>It is a way to opt-in into stricter variant of Javascript, therefore exiting out of "sloppy mode". 
+        It is important to now that it is not subset of JavaScript, but it has different semantics. Some 
+        browsers do not support strict mode. They will run code in strict mode with different behavior.
+        Use statement below at the beginning of the file to use strict mode.
+    </p>
+
+    <pre>"use strict";</pre>
+
+    <h3>Variable declaration</h3>
+    <p>Variable declaration can be done in 4 different ways. </p>
+    <pre>
+        const variable1 = 1;
+        let variable2 = 2;
+        var variable3 = 3;
+        variable4 = 4;
+    </pre>
+    <p>As it can be done in 4 different ways, the functionality changes in different declaration methods.
+        As a rule of thumb, it is advised to use "let" as much as possible compared to "var". "let" variables can be updated, but can't 
+        be re-declared. "var" variables can be updated and re-declared. "const" variables can't be updated or re-declared. "const" is 
+        used whenever we know that the value of the variable won't change.
+    </p>
+
+    <h3>Are Objects immutable in JavaScript ?</h3>
+    <p>Objects are mutable unless we use Object.freeze() functionality on them.</p>
+    <pre> 
+        const myMutableObject {
+            attribute: "not changed"
+        }
+        console.log(myMutableObject.attribute);
+        myMutableObject.attribute = "changed";
+        console.log(myMutableObject.attribute);
+
+        // Expected output: not changed
+                            changed
+    </pre>
+
+    <p>However, if we would like to make our objects immutable, we need to use Object.freeze().</p>
+    <pre>
+        myImmutableObject = Object.freeze({
+            attribute: "not changed"
+        });
+        console.log(myImmutableObject.attribute);
+        myImmutableObject.attribute = "changed";
+        console.log(myImmutableObject.attribute);
+
+        // Expected output: not changed
+                            not changed
+    </pre>
+
+    <h3>Scopes</h3>
+    <p>JavaScript scope determines the availability/accesibility and visibility of our variables.
+        We can differentiate between 2 types of scopes. GLOBAL and LOCAL. Variables in Global scope are all variables 
+        which are declared outside of function. Variables which are declared inside of a function, immediately become Local 
+        scope.
+    </p>
+    <pre>
+        let variable1 = "abc";
+        {
+            let variable1 = 123;
+        }
+        console.log(variable1);
+
+        // Expected output: abc
+    </pre>
+
+    <h3>Type Coercion</h3>
+    <p>Type Coeercion is process of converting value from one type to another. All types (primitive or objects)
+        can be subjects of coercion.
+    </p>
+    <pre>
+        let variableA;
+        let variableB;
+
+        console.log(variableA + variableB);
+        console.log(variableA, variableB);
+
+        // Expected output: NaN
+                            undefined undefined
+    </pre>
+
+    <h3>Problem when we use "var" inside of For-Loop</h3>
+    <p>As we said before, there are 3 ways to declare a variable. We need to declare a variable 
+        when we are defining a For-Loop. We have 3 options when we want to declare a variable.
+        1) const - If we use const in for loop, it will immediately crash as const variables can't be 
+        updated or re-declared. If we declare i as const to be equal 0, at the second iteration when i will
+        be incremented, it will crash.
+        2) var - If we use var in for loop, seemingly it will work great, but in reality, if we declare i to be var, 
+        then every i in the file will follow i from for loop. That is because var can be redeclared and updated and is visible globaly.
+        3) let - way to go ! 
+    </p>
+    <pre>
+        for (let i = 0; i < 10; i++) {
+            setTimeout(() => {
+                // this code will run after 1 second
+                console.log(i);
+            }, 1000);
+        }
+
+        // Expected output: 1 2 3 4 5 6 7 8 9
+    </pre>
+
+    <pre>
+        for (var i = 0; i < 10; i++) {
+            setTimeout(() => {
+                // this code will run after 1 second
+                console.log(i);
+            }, 1000);
+        }
+
+        // Expected output: 9 9 9 9 9 9 9 9 9
+    </pre>
+
+    <h3>Nodemon, what is it and what is it used for ?</h3>
+    <p>nodemon is a tool that makes developing Node.js applications easier by continuously looking at the project folder
+        and detecting changes. When he detects a change, it immediately stops the run of some file and re-runs it. By doing so, it ensures that the 
+        current running version of our file is latest and contains of the all changes. When we are working with nodemon, we have 3 options:
+        - install only for this project 
+        <span>$ npm install --save-dev nodemon</span>
+
+        - install globaly in system so it can be used for any and all projects 
+        <span>$ npm install -g nodemon</span>
+
+        - use dependency without installing nodemon 
+        npx nodemon &lt;file_name&gt;
+
+        To stop the nodemon re-running file, just press:
+        <span>Ctrl + C</span>
+    </p>
+
+    <h3>Semantic Versioning</h3>
+    <p>Semantic Versioning is a versioning scheme for using meaningful version numbers (that's why it is cal
+        led Semantic Versioning). Specifically, the meaning revolves around how API versions compare in terms 
+        of backwards-compatibility.</p>
 </body>
 </html>
