@@ -30,5 +30,98 @@
             <a href="./lesson_5.html">Lesson 5</a>
         </li>
     </ul>
+
+    <h3>Creating and interacting with .json file</h3>
+    <p>Making .json file is really easy. When you are creating new file of type json, give it any name and add .json extension.</p>
+
+    <span>scorpion.js</span>
+
+    <p>Now we can interact with it. First let's write something inside of it:</p>
+    <pre>
+        {
+            "name": "Johny",
+            "color": "black", 
+            "length": "15cm",
+            "venomous": "true"
+        }
+    </pre>
+
+    <p>Now that we have .json file which has some data, now we can read from it.</p>
+    <pre>
+        const scorpion = require("path/to/scorpion.json");
+        console.log(scorpion);
+
+        // Expected output: { name: 'Johny', color: 'black', length: '15cm', venomous: 'true' }
+    </pre>
+
+    <h3>Http Methods</h3>
+    <p>We have covered 5 main Http methods: GET, POST, DELETE, PUT and PATCH.
+        We use Get when we want to read some data or request a specific resource. We use Post 
+        when we want to create some resource and send it to some storing infrastructure(database). 
+        We use Delete when we remove a resource. It can be either remove all of the resources or remove 
+        specific. We can use Path variable to select specific resource of deleting. We use Put when we want to 
+        update existing resource, but we need to update whole resource. We use this when we know that the body
+        of a whole resource will change. We use Patch when we need to update only parts of an existing resource. 
+        We can update small amount or big amount but not whole resource.
+    </p>
+
+    <h3>Advanced turning on the server</h3>
+    <p>As we already said, the command in Express which is responsbile for turning on the server is: </p> 
+    <span>app.listen(&lt;port_number&gt;);</span>
+
+    <p>With this approach everything works fine and there are no errors, but there is no option to see the port itself 
+        or to see error if it exists. Therefore, we need to add some modification to this method. New method looks like this:
+    </p>
+    <pre>
+        app.listen(8080, (error) => {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log("Server is running on port", 8080);
+            }
+        });
+    </pre>
+
+    <p>This new app.listen will ensure that we get some output in the console if the run was successfull or if the run 
+        crashed. If it crashed, it will give us the error or if it was successfull we will get something alongside these lines: 
+    </p>
+    <span>App is running on server port 8080</span>
+
+    <h3>Serving the HTML files with Express</h3>
+    <p>To achieve this, firsly we need 2 things: fully function server which was previously set up and "__dirname". 
+        Setting up the server is made in __ steps. Firstly create package.json, then add dependency, package name and version number.
+        Then npm install it. Then create app.js and import express from node_modules. Then set app to use express and turn on the server. 
+    </p>
+
+    <h3>What is "__dirname" ?</h3>
+    <p>__dirname is used in JavaScrip as an environment variable. It essentially returns the path to the file we are using it in. Therefore 
+        it is really useful as it can enable multiple people using same program on multiple operating systems by having independent file location.
+        If our folder structure looked something like this:
+    </p>
+    
+    <pre>
+        path/to/folder/ - folder1 - file1 
+                                  - file2 
+
+                        - folder2 - myProjectFolder - myFile.js
+    </pre>
+
+
+    <p>If we would use the "__dirname" in myFile.js, we would get that the "__dirname" is equal to this: </p>
+    
+    <span>path/to/flder/folder2/myProjectFolder</span>
+
+    <p>Now, once we understand __dirname, we can move to an actual serving of Html pages.</p>
+
+    <h3>Use  "__dirname" to server HTML pages</h3>
+    <p>We already have configured server. Now we need to just add this:</p>
+
+    <pre>
+        app.get("/", (req, res) => {
+            res.sendFile(__dirname + "/myFile.js");
+        });
+    </pre>
+
+    <p>We can then run the app.js and go to <strong>localhost:8080</strong> and we will get am HTML page.</p>
 </body>
 </html>
