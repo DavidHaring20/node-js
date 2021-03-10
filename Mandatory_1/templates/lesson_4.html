@@ -30,5 +30,109 @@
             <a href="./lesson_5.html">Lesson 5</a>
         </li>
     </ul>
+
+    <h3>Functional approaches</h3>
+    <p>There are numerous ways to iterate through, look inside or perform other type of data manipulation on array.
+        We have learned about most effective ways, which are called FUNCTIONAL APPROACHES or FUNCTIONAL PROGRAMMING.
+        In the next section, we have 2 examples of iterating through an array. First one is pretty basic, while other is 
+        functional way of iterating.
+        
+        Firstly let's make an array: 
+    </p>
+
+    <pre>const exampleArray = [1, 2, 3, 4, 5];</pre>
+
+    <p>Basic way of iterating:</p>
+    <pre>
+        for (let i = 0; i < exampleArray.length; i++) {
+            console.log(exampleArray.lenght[i]);
+        }
+
+        // Expected output: 1, 2, 3, 4, 5
+    </pre>
+
+    <p>Functional way of iterating:</p>
+    <pre>
+        exampleArray.map(ex => {
+            console.log(ex);   
+        });
+
+        // Expected output: 1, 2, 3, 4, 5
+    </pre>
+
+    <h3>How to send HTML code within Get Response</h3>
+    <p>As we have covered setting up Express app in <a href="./lesson_2.html">Lesson_2</a> we won't be 
+        covering it now. You already know how to set up the Express app. Here is the method which shows
+        how to pass HTML code inside of an Http Get Response.
+    </p>
+
+    <pre>
+        app.get("/page", (req, res) => {
+            res.send(
+                "<strong>Hello from Get Response !</strong>"
+            );
+        });
+    </pre>
+
+    <h3>Interacting with Web Search Query</h3>
+    <pre>Web Search Query is a query which was inputed by user and it specifies for which information should PC look. 
+        As user inputs some information, we might need that information so we can perform further data collecting. We'll 
+        now take a look into how to collect search query.
+    </pre>
+
+    <pre>
+        app.get("/search", (req, res) => {
+            res.send({ searchquery: req.query });
+        });
+    </pre>
+
+    <p>If we run our app.js, and go to web browser, search for <strong>localhost:8080/search</strong> we would get following output:</p>
+
+    <pre>
+        searchquery: /search
+    </pre>
+
+    <h3>Interacting with Path Variables</h3>
+    <p>Path parameters are also one kind of filtering and searching queries. They come after the Search Query in the URL 
+        and they can be ommited. While the Search query is used to sort or filter some data, Path Variable is used to specify and find 
+        exact resource that is needed.
+    </p>
+
+    <pre>
+        app.get("/telegram/:message", (req, res) => {
+            const messageForClient = req.params;
+            res.send({ msg: messageForClient });
+        });
+    </pre>
+
+    <p>If we run that app.js, and we head to the browser, search for <strong>localhost:8080/telegram/Hello there</strong>,
+        we would get following output on new page: 
+    </p>
+
+    <span>msgForClient: "Hello there"</span>
+
+    <h3>Post HTTP Method</h3>
+    <p>Post Http Method is a method which is used when we want to create an Entity. It is more trick then Get,
+        but not that hard. We can use Postman API to help us when quering Post Http Methods. There are 2 main differences 
+        between Get and Post. First one is that Post will not retrieve a web page. Other is that we need Postman when testing our Post 
+        Method. Now we will take a look at our Post Http Method. This method will create 1 new car and put it in the array with other cars.
+        That car remains saved until we re-run our server and it overwrites(or better to say, re-instantiates) the array.
+    </p>
+
+    <pre>
+        app.post("/cars/:car1", (req, res) => {
+            let car1 = req.params.car1;
+            
+            cars.push(car1);
+        
+            res.redirect("/cars");
+        });
+    </pre>
+
+    <p>Now that we have our Post method in place, we need to run our app.js and enter the Postman.
+        There we need switch from GET to POST and enter this link in the text box: <strong>localhost:8080/cars/Peugeot</strong>
+        and press button "Send" which is blue. After that, we can head to the browser and search for <strong>localhost:8080/cars</strong> . 
+        It will then give us an array of cars with a newly made care inside of it.
+    </p>
 </body>
 </html>
