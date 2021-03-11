@@ -115,3 +115,70 @@ app.get("/", (req, res) => {
 __dirname = is an environment variable that tells you the absolute path of the directory containing the currently executing file.
 
 This concluded lesson 5 and next time we are supposed to learn how to pass the CSS alongside the HTML.
+
+LESSON 6
+Lesson 6 was probably the hardest lesson so far as there was a lot of terminal usage, environemt variables and some fancy JavaScript 
+stuff which I am not very knowledgeable of. During the lesson 6 we have covered the following:
+    - scripts 
+    - running scripts 
+    - setting and using environment variables 
+    - process and process.env 
+    - POST Http Method 
+    - DELETE Http Method 
+    - PATCH Http Method 
+    - .filter()
+
+• scripts - is a property of package.json file like a "dependencies". It supports a number of built-in scripts and even some arbitrary scripts
+    which have been written by us. They are written in this schema: 
+    {
+        "scripts": {
+            "script_name": "terminal_command"
+        },
+        "dependencies": {
+            "package_name": "version_number"
+        }
+    } 
+    Once they are run, they will execute code they are paired with. 
+
+• Scripts can be run by using this command: 
+        $ npm run <script_name>
+
+• ENVIRONMENT VARIABLES = dynamic-named value that can affect the way running processes will behave on a PC. They are 
+        part of the environment that processes run in. 
+    Setting environemnt variables: 
+        $ env:<name_of_environment_variable> = <value_of_environment_variable>
+    Example:
+        $env:myEnvVariable = 1
+    Deleting of an environemnt variables is really easy too. You can do the following: 
+        delete myEnvVariable
+    
+    
+• Using environment variables is very easy. You just need to pass it from Environment variable library. You can do it using following:
+        process.env.<name_of_environment_variable
+    If it was assigned to be 1. Then you can do following: 
+        const number = process.env.myEnvVariable;
+        console.log(number);
+        // Expected output = 1
+
+• POST HTTP METHOD is a method which creates a new resource by providing whole body. You can create it through Postman by setting the type of 
+    Request to "POST", providing URL of you API endpoint and then going Body > Raw and selecting JSON format. 
+    Once you have done all that, you can type in your text and press "Send".
+
+• DELETE HTTP METHOD is a method which deletes a whole resource. We have done it by using .filter() method. You just need to set your request in Postman 
+    to "DELETE", provide URL of your API endpoint and press "Send".
+
+• PATCH HTTP METHOD is a method which updates a resource, but only partly. This means that it will not update whole resource, but only one portion of it. 
+    We can use it in Postman. You just need to switch to "PATCH" request, provide URL of your API endpoint and then go Body > Raw, switch format from Text to JSON 
+    and write the body.
+
+• .filter() = a method which create a new array with all elements that pass the test implemented by the provided function.  
+    Example: 
+    const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+    const result = words.filter(word => word.length > 6);
+    console.log(result);
+
+    // Expected result: ["exuberant", "destruction", "present"]
+
+
+    
