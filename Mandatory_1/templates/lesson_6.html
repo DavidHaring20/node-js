@@ -7,6 +7,8 @@
     <title>Lesson 6</title>
 </head>
 <body>
+    <h1>Welcome to Lesson 6</h1>
+
     <ul>
         <li>
             <a href="./home.html">Home</a>
@@ -30,5 +32,118 @@
             <a href="./lesson_6.html">Lesson 6</a>
         </li>
     </ul>
+
+    <h3>What are Scripts and how to work with Scripts ?</h3>
+    <p>Scripts can be 2 different things. If we are talkin in a file context, then these are file which can be executed and when executed,
+        they perform some functionality. If we are talking in .json file context, then it is a property of a .json file (like "dependencies").
+        They can be either made by us or some built-in. It consists out of script name and command that will be executed when we run that script. 
+        Scripts are very handy when there is project which needs a lot of executing of terminal commands. You can therefore instantiate some scripts 
+        which are routinely executed so it sorts of become some saved snippet.
+        They are written like this (in .json file): 
+    </p>
+    <pre>
+        {
+            "scripts": {
+                "script_name1": "terminal_command1",
+                "script_name2": "terminal_command1"
+            }
+        }
+    </pre>
+
+    <p>Once we have our scripts defined(by having a script name and valid terminal command), we can run them so they can execute.
+        We do it by following: 
+    </p>
+    <pre>
+        {
+            "scripts": {
+                "start-dev": "nodemon app.js"
+            }
+        }
+    </pre>
+    <p>General syntax for running is: </p>
+    <span>$ npm run &lt;script_name&gt;</span>
+
+    <p>But in this specific case, we do it like this: </p>
+    <span>$ npm run start-dev</span>
+
+    <h3>Environment variables</h3>
+    <p>Environment variables are dynamic-named values that can affect the way running processes will behave. They are very useful 
+        when some processes must be ran on different PCs and different Operating Systems. If we have some hardcoded values, and it works on 
+        our PC and our Operating system, it may not work on others. Environemnt variables are called so because these variables are variables 
+        in the environment where the process will run. Setting environment variables is very easy. This is general syntax for setting an environment 
+        variable: 
+    </p>
+    <span>$ env:&lt;name_of_environment_variable&gt; = &lt;value_of_environment_variable&gt;</span>
+    <p>So this could be a real example of some environment variable:</p>
+    <span>$env:dev-port=4000</span>
+    <p>These commands must be written in the Terminal and to remove some environment variable you can use this command: </p>
+    <span>$ [Environment]::SetEnvironmentVariable(&lt;name_of_environment_variable), $null, &lt;location&gt;</span>
+    <p>In my case, I used this command and it worked: </p>
+    <span>[Environemnt]::SetEnvironmentVariable(myEnvironemtVariable, $null, "User");</span>
+    <p>If you want to view the list of all environemnt variables while in JavaScript, you can write this code snippet:</p>
+    <pre>console.log(process.env);</pre>
+    <p>But if you are searching for a specific environment variable, let's say you search for an environemtal variable we created above(dev-port):</p>
+    <pre>console.log(process.env.dev-port);</pre>
+    <p>This code snippet should give us: 4000</p>
+
+    <h3>POST, DELETE and PATCH Http Methods</h3>
+    <p>Because of their functionality and usage, there are different types of HTTP Methods. 
+        We have already covered GET Http Method in <a href="./lesson_2.html">Lesson 2</a>. 
+    </p>
+
+    <h4>POST Http Method</h4>
+    <p> POST Http Method is a method which is used when we want to create a new resource/entity. 
+        It passes a body and by using the attributes and values in that <body>
+        it can create new resource/entity. Here you can see an example of POST Http Method: 
+    </p>
+    <pre>
+        app.post("/animes", (req, res) => {
+            let newAnime = {};
+            newAnime.id = ++autoincrement;
+            newAnime.title = req.body.title;
+            newAnime.protagonist = req.body.protagonist;
+            newAnime.grade = req.body.grade;
+            console.log(req.body);
+            
+            animes.push(newAnime);
+            
+            res.send({ data: newAnime});
+        });
+    </pre>
+
+    <h4>DELETE Http Method</h4>
+    <p> DELETE Http Method is a method which is used when we want to delete some entity/resource. 
+        We can either delete all, delete everything that is true for something or we can delete only one and that is 
+        usually selected by Id. While delete all, poses big risk, delete by Id is most usuall approach to the DELETE Http Method.
+        Here you can see an example of DELETE Http Method.
+    </p>
+    <pre>
+        app.delete("/animes/:id", (req, res) => {
+            const id = Number(req.params.id);
+            const deletedAnime = animes.find(anime => anime.id === id);
+            animes = animes.filter(anime => anime.id !== id);
+            
+            res.send({ deletedAnime });
+        });
+    </pre>
+
+    <h4>PATCH Http Method</h4>
+    <p> PATCH Http Method is a method which is used when we want to update only part of the resource/entity. The 
+        updated entity is usually selected by Id. Here you can see an example of PATCH Http Method: 
+    </p>
+    <pre>
+        app.patch("/animes/:id", (req, res) => {
+            const id = Number(req.params.id);
+        
+            animes = animes.map(anime => {
+                if (anime.id === id) {
+                    return { ...anime, ...req.body, id: anime.id};
+                }
+                return anime;
+            });
+        
+            res.send({ message: "updated" });
+        });
+    </pre>
 </body>
 </html>

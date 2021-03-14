@@ -79,9 +79,7 @@ app.delete("/animes/:id", (req, res) => {
     const id = Number(req.params.id);
     const deletedAnime = animes.find(anime => anime.id === id);
     animes = animes.filter(anime => anime.id !== id);
-
-
-
+    
     res.send({ deletedAnime });
 });
 
