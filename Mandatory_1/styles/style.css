@@ -28,16 +28,33 @@ a {
     font-size: 20px;
     color: black;
     padding: 10px 20px;
-    border: 1px solid black;
-    background-color: var(--color-primary);
+}
+
+h3 {
+    font-family: var(--headers-font);
+    font-size: 30px;
+    color: var(--color-primary)
 }
 
 p {
-    width: 60ch;
+    width: 40ch;
+    font-size: 22px;
+    font-family: var(--p-font);
+    line-height: 1.5em;
+}
+
+.logo-picture {
+    width: 40%;
+    height: 40%;
+}
+
+.img-logo-lesson-3 {
+    width: 90%;
+    height: 90%;
 }
 
 .text-body div {
-    border: 1px solid red;
+    display: flex;
 }
 
 .navigation-menu {
@@ -54,7 +71,40 @@ p {
 
 .text-body {
     position: relative;
-    width: 700px;
-    margin: 20px auto;
+    width: 80%;
+    margin: 100px auto;
 }
 
+.div-grid {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.lessons {
+    margin: 80px 0;
+}
+
+.h3-in-grid {
+    margin: 50px 0;
+}
+
+.p-in-grid {
+    margin: 10px 30px;
+}
+
+.grey {
+    background-color: rgba(31, 27, 27, 0.774);
+    color: white;
+}
+
+.border-button {
+    border-right: 2px solid var(--color-primary);
+    border-left: 2px solid var(--color-primary);
+}
+
+.border-button:hover {
+    background-color: var(--color-primary);
+}
