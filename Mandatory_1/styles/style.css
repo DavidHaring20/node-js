@@ -5,7 +5,7 @@
 :root {
     --headers-font: 'Ubuntu', sans-serif;
     --p-font: 'Roboto', sans-serif;
-    --span-pre-font: 'Kanit', sans-serif;
+    --span-pre-a-font: 'Kanit', sans-serif;
     --color-primary: rgb(107, 191, 71);
 }
 
@@ -28,6 +28,7 @@ a {
     font-size: 20px;
     color: black;
     padding: 10px 20px;
+    font-family: var(--span-pre-a-font);
 }
 
 h3 {

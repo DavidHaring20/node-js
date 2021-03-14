@@ -8,35 +8,37 @@
     <link rel="stylesheet" href="styleForLessons.css">
 </head>
 <body>
-    <h1>Welcome to Lesson 1</h1>
+    <h1 class="header">Welcome to "Lesson 1"</h1>
 
-    <ul>
+    <div class="navigation-menu">
+        <ul>
         <li>
-            <a href="./home.html">Home</a>
+            <a class="border-button" href="./home.html">Home</a>
         </li>
         <li>
-            <a href="./lesson_1.html">Lesson 1</a>
+            <a class="border-button" href="./lesson_1.html">Lesson 1</a>
         </li>
         <li>
-            <a href="./lesson_2.html">Lesson 2</a>
+            <a class="border-button" href="./lesson_2.html">Lesson 2</a>
         </li>
         <li>
-            <a href="./lesson_3.html">Lesson 3</a>
+            <a class="border-button" href="./lesson_3.html">Lesson 3</a>
         </li>
         <li>
-            <a href="./lesson_4.html">Lesson 4</a>
+            <a class="border-button" href="./lesson_4.html">Lesson 4</a>
         </li>
         <li>
-            <a href="./lesson_5.html">Lesson 5</a>
+            <a class="border-button" href="./lesson_5.html">Lesson 5</a>
         </li>
         <li>
-            <a href="./lesson_6.html">Lesson 6</a>
+            <a class="border-button" href="./lesson_6.html">Lesson 6</a>
         </li>
-    </ul>
+        </ul>
+    </div>
 
-    <div class="lesson-1-body">
+    <div class="text-body">
         <div>
-            <h2>Getting started</h2>
+            <h2 class="header-h2">Getting started</h2>
 
             <h3>What is Node.js ?</h3>
 
@@ -51,29 +53,36 @@
                 installed on our PC:
             </p>
 
-            <span>$ node -v</span>
+            <div class="div-span">
+                <span><i>$ node -v</i></span>
+            </div>
 
             <p>If you don't have any version go here to <a href="https://nodejs.org/en/download/">download Node.js</a>. 
                 Just choose LTS version and follow installation steps. Once it is downloaded, re-enter the the command 
                 from above. This is the wanted output: 
             </p>
 
-            <span>$ v14.15.1</span>
+            <div class="div-span">
+                <span><i>$ v14.15.1</i></span>
+            </div>
 
             <p>Once you got this output or some other version, congratulations, you did it.</p>
 
             <h3>JavaScript exercises</h3>
             
-            <strong>Exercise - Add numbers from string to float</strong>
-            <pre>
-                const numberOne = "1.10";
-                const numberTwo = "2.30";
-                const result = parseFloat(numberOne) + parseFloat(numberTwo);<br>
-                console.log(result);
+            <div class="exercise">
+                <strong>Exercise - Add numbers from string to float</strong>
+                <pre>
+                    const numberOne = "1.10";
+                    const numberTwo = "2.30";
+                    const result = parseFloat(numberOne) + parseFloat(numberTwo);<br>
+                    console.log(result);
 
-                // Expected output: 3.40
-            </pre>
+                    // Expected output: 3.40
+                </pre>
+            </div>
 
+            <div class="exercise"></div>
             <strong>Exercise - Define an object</strong>
             <pre>
                 const myObject = {
@@ -85,6 +94,7 @@
                 // Expected output: I am David and I am 20 years old.
             </pre> 
         
+            <div class="exercise"></div>
             <strong>Exercise - Add a property</strong>
             <pre>
                 const stackOverflow = {};
@@ -94,6 +104,7 @@
                 // Expected output: true
             </pre>
 
+            <div class="exercise"></div>
             <strong>Exercise - Remove a property</strong>
             <pre>
                 const thisSong = {
@@ -105,6 +116,7 @@
                 // Expected output: undefined
             </pre>
 
+            <div class="exercise"></div>
             <strong>Exercise - Populate Array</strong>
             <pre>
                 const friends = [];
@@ -117,6 +129,7 @@
                 // Expected output: [ 'Joe', 'Johny', 'Jack', 'Julius' ]
             </pre>
 
+            <div class="exercise"></div>
             <strong>Exercise - Get the index of the first occurence of some value</strong>
             <pre>
                 const significantMathNumbers = [0, 2.718, 3.14159, 1729];
@@ -125,6 +138,7 @@
                 // Expected output: 3
             </pre>
 
+            <div class="exercise"></div>
             <strong>Exercise - For loop</strong>
             <pre>
                 const numbers  = [5, 3, 2, 7, 11, 12, 0, -20, 6];
@@ -159,11 +173,11 @@
 
             <p>If we would like to run our file(myJsFile.js), we firstly need to get into that directory.</p>
 
-            <span>cd /path/to/dir2</span>
+            <span><i> cd /path/to/dir2</i></span>
 
             <p>Now, we are in the same directory as our wanted .js file. Now we use command node &lt;file_name&gt;</p>
             
-            <span>node myJsFile.js</span>
+            <span><i>node myJsFile.js</i></span>
         </div>
 
     </div>
