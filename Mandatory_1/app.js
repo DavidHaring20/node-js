@@ -12,5 +12,6 @@ app.listen(8080, (error) => {
     if (error) {
         console.log(error);
     } 
-    console.log("App is running on server port", 8080);
+    console.log("App is running on server port " + 8080);
+    console.log("Go here to see the home web page: " + "localhost:8080/home");
 });

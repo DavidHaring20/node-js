@@ -5,204 +5,208 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 2</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="styleForLessons.css">
 </head>
 <body>
-    <h1>Welcome to Lesson 2</h1>
+    <h1 class="header">Welcome to "Lesson 2"</h1>
 
-    <ul>
-        <li>
-            <a href="./home.html">Home</a>
-        </li>
-        <li>
-            <a href="./lesson_1.html">Lesson 1</a>
-        </li>
-        <li>
-            <a href="./lesson_2.html">Lesson 2</a>
-        </li>
-        <li>
-            <a href="./lesson_3.html">Lesson 3</a>
-        </li>
-        <li>
-            <a href="./lesson_4.html">Lesson 4</a>
-        </li>
-        <li>
-            <a href="./lesson_5.html">Lesson 5</a>
-        </li>
-        <li>
-            <a href="./lesson_6.html">Lesson 6</a>
-        </li>
-    </ul>
+    <div class="navigation-menu">
+        <ul>
+            <li>
+                <a class="border-button" href="./home.html">Home</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_1.html">Lesson 1</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_2.html">Lesson 2</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_3.html">Lesson 3</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_4.html">Lesson 4</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_5.html">Lesson 5</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_6.html">Lesson 6</a>
+            </li>
+        </ul>
+    </div>
 
-    <h3>Function</h3>
-    <p>Functions are fundamental building blocks of a JavaScript. It is similar to procedure.
-        We can say that functions take input and produce output which has some logical relation to the input. 
-        Code inside of the function is executed once the function is invoked(called). It consists of 4 parts:
-        "function" keyword, name of the function, list of parameters and of a function body. Function body can consist 
-        of some statements and all of those statements must be wrapped in curly brackets {} 
-    </p>
-    <pre>
-        function myFirstFunction() {
-            return "Hello World.";
-        }
-        console.log(myFirstFunction);
-        
-        // Expected output: Hello World.
-    </pre>
-
-    <h3>Function which can take arguments</h3>
-    
-    <p>Arguments is an object which is similar to array. The values which are stored in that space which is array-like,
-        can be accessed throughout the function.
-    </p>
-    
-    <pre>
-        const number1 = 2;
-        const number2 = 5;
-
-        function summTwoNumbers(x, y) {
-            return x + y; 
-        }
-        console.log(summTwoNumbers(number1, number2));
-
-        // Expected output: 7
-    </pre>
-
-    <h3>Callback functions</h3>
-
-    <p>Callback is a function which is passed as an argument to other function.
-        It is really useful as it offers better control of what and when is being executed.
-        Here is an example of an Callback function:
-    </p>
-
-    <pre>
-        function interact(genericFunction, name) {
-            console.log(genericFunction(name));
-        }
-        
-        const nameOfPerson = "Johny";
-
-        const poke = (nameOfPerson) => {
-            return "Poke " + nameOfPerson ;
-        }
-
-        console.log(interact(poke, nameOfPerson););
-
-        // Expected output: Poke Johny
-    </pre>
-
-    <p>After we have talked and learned about Functions, we have had introduction to Express and Http Methods.</p>
-
-    <h3>What is Express ?</h3>
-
-    <p>Express is Node.js web application framework which makes production of an API really is. It supports big variety of HTTP utility
-        and it is minimal and very flexible.
-    </p>
-
-    <h3>But how do I use Express ?</h3>
-    
-    <p>Setting up Express is really easy. Firstly, we need to make a folder. You can do it by using Visual studio interface
-        or copping this command into you terminal.
-    </p>
-
-    <span>mkdir &lt;folder_name&gt;</span>
-
-    <p>Once we have created our folder you need to enter inside of it.</p>
-
-    <span>cd &lt;folder_name&gt;</span>
-
-    <p>Once you are inside of your new folder, we start of by making file called:</p>
-
-    <span>package.json</span>
-
-    <p>Next we enter that folder and add the curly braces. Opening curly braces at the beginning of the file, 
-        closing curly brackets at the end of the file. We can then declare our keys, packages, versions and many more.
-    </p>
-
-    <p>Here you can see example of .json file:</p>
-    <pre>
-        {
-            "key": {
-                "package_name": "version"
+    <div class="text-body">
+        <h3>Function</h3>
+        <p>Functions are fundamental building blocks of a JavaScript. It is similar to procedure.
+            We can say that functions take input and produce output which has some logical relation to the input. 
+            Code inside of the function is executed once the function is invoked(called). It consists of 4 parts:
+            "function" keyword, name of the function, list of parameters and of a function body. Function body can consist 
+            of some statements and all of those statements must be wrapped in curly brackets {} 
+        </p>
+        <pre>
+            function myFirstFunction() {
+                return "Hello World.";
             }
-        }
-    </pre>
+            console.log(myFirstFunction);
+            
+            // Expected output: Hello World.
+        </pre>
 
-    <p>But, if we would want to have Express app, our .json file needs to look similar to this:</p>
+        <h3>Function which can take arguments</h3>
+        
+        <p>Arguments is an object which is similar to array. The values which are stored in that space which is array-like,
+            can be accessed throughout the function.
+        </p>
+        
+        <pre>
+            const number1 = 2;
+            const number2 = 5;
 
-    <pre>
-        {
-            "dependencies": {
-                "express": "^4.17.1"
+            function summTwoNumbers(x, y) {
+                return x + y; 
             }
-        }
-    </pre>
+            console.log(summTwoNumbers(number1, number2));
 
-    <p>Once we have set up our .json file like this, we can head to the terminal and enter in the same folder where is that
-        .json file. We now need to install the Express dependency or we can install more dependencies if we wish or if we have 
-        larger project. We do by using this command: 
-    </p>
+            // Expected output: 7
+        </pre>
 
-    <span>$ npm i </span>
-    <span>$ npm install</span>
+        <h3>Callback functions</h3>
 
-    <p>We can use both commands as "i" is an abbreviation for install and it works too. Now, if the install was successfull
-        we can see that the new folder called "node_modules" has been created. Now we need to make new javascript file where 
-        we will set up server.
-        We do it by creating new file, called "app.js". It doesn't need to be exact, but if we will follow their documentation,
-        then it should be "app.js". Now, we need to fill the "app.js" in order to have functioing server.
-        You can write this code: 
-    </p>
+        <p>Callback is a function which is passed as an argument to other function.
+            It is really useful as it offers better control of what and when is being executed.
+            Here is an example of an Callback function:
+        </p>
 
-    <pre>
-        const express = require("express");
-        const app = express();
+        <pre>
+            function interact(genericFunction, name) {
+                console.log(genericFunction(name));
+            }
+            
+            const nameOfPerson = "Johny";
 
-        // Functional code goes here
+            const poke = (nameOfPerson) => {
+                return "Poke " + nameOfPerson ;
+            }
 
-        app.listen(8080);
-    </pre>
+            console.log(interact(poke, nameOfPerson););
 
-    <p>There are few different and new things here. Firstly, we need Express so we declare it as const and import it.
-        We do it in the first line of code. When we say "require("express")", PC will look inside of "node_modules" folder
-        and bring it in for us. 
-        Then we declare our app and set it to operate under express.    
-        Last line of code is where we actually turn the server on and specify which port will server listen to.
-        If we would make a Http request to port 8080, we wouldn't get anything as we do not have anything which can be
-        retrieved if it was requested. We can make simple function which will return some output and that way we will now that 
-        our server functions good.
-        We can add this function where the functional code goes. 
-    </p>
+            // Expected output: Poke Johny
+        </pre>
 
-    <pre>
-    app.get("/", (req, res) => {
-        res.send({message: "First call to /" });
-    });
-    </pre>
+        <p>After we have talked and learned about Functions, we have had introduction to Express and Http Methods.</p>
 
-    <p>Now our code looks like this:</p>
-    
-    <pre>
-        const express = require("express");
-        const app = express();
+        <h3>What is Express ?</h3>
 
+        <p>Express is Node.js web application framework which makes production of an API really is. It supports big variety of HTTP utility
+            and it is minimal and very flexible.
+        </p>
+
+        <h3>But how do I use Express ?</h3>
+        
+        <p>Setting up Express is really easy. Firstly, we need to make a folder. You can do it by using Visual studio interface
+            or copping this command into you terminal.
+        </p>
+
+        <span>mkdir &lt;folder_name&gt;</span>
+
+        <p>Once we have created our folder you need to enter inside of it.</p>
+
+        <span>cd &lt;folder_name&gt;</span>
+
+        <p>Once you are inside of your new folder, we start of by making file called:</p>
+
+        <span>package.json</span>
+
+        <p>Next we enter that folder and add the curly braces. Opening curly braces at the beginning of the file, 
+            closing curly brackets at the end of the file. We can then declare our keys, packages, versions and many more.
+        </p>
+
+        <p>Here you can see example of .json file:</p>
+        <pre>
+            {
+                "key": {
+                    "package_name": "version"
+                }
+            }
+        </pre>
+
+        <p>But, if we would want to have Express app, our .json file needs to look similar to this:</p>
+
+        <pre>
+            {
+                "dependencies": {
+                    "express": "^4.17.1"
+                }
+            }
+        </pre>
+
+        <p>Once we have set up our .json file like this, we can head to the terminal and enter in the same folder where is that
+            .json file. We now need to install the Express dependency or we can install more dependencies if we wish or if we have 
+            larger project. We do by using this command: 
+        </p>
+
+        <span>$ npm i </span>
+        <span>$ npm install</span>
+
+        <p>We can use both commands as "i" is an abbreviation for install and it works too. Now, if the install was successfull
+            we can see that the new folder called "node_modules" has been created. Now we need to make new javascript file where 
+            we will set up server.
+            We do it by creating new file, called "app.js". It doesn't need to be exact, but if we will follow their documentation,
+            then it should be "app.js". Now, we need to fill the "app.js" in order to have functioing server.
+            You can write this code: 
+        </p>
+
+        <pre>
+            const express = require("express");
+            const app = express();
+
+            // Functional code goes here
+
+            app.listen(8080);
+        </pre>
+
+        <p>There are few different and new things here. Firstly, we need Express so we declare it as const and import it.
+            We do it in the first line of code. When we say "require("express")", PC will look inside of "node_modules" folder
+            and bring it in for us. 
+            Then we declare our app and set it to operate under express.    
+            Last line of code is where we actually turn the server on and specify which port will server listen to.
+            If we would make a Http request to port 8080, we wouldn't get anything as we do not have anything which can be
+            retrieved if it was requested. We can make simple function which will return some output and that way we will now that 
+            our server functions good.
+            We can add this function where the functional code goes. 
+        </p>
+
+        <pre>
         app.get("/", (req, res) => {
             res.send({message: "First call to /" });
         });
+        </pre>
 
-        app.listen(8080);
-    </pre>
+        <p>Now our code looks like this:</p>
+        
+        <pre>
+            const express = require("express");
+            const app = express();
 
-    <p>Now we just need to run our app.js. We do it by entering into the folder where the app.js is and writing folllowing
-        command:
-    </p>
+            app.get("/", (req, res) => {
+                res.send({message: "First call to /" });
+            });
 
-    <span>$ node app.js</span>
+            app.listen(8080);
+        </pre>
 
-    <p>This command will run app.js and now we have fully functioning server which can respond to 
-        our request:
-    </p>
+        <p>Now we just need to run our app.js. We do it by entering into the folder where the app.js is and writing folllowing
+            command:
+        </p>
 
-    <span>localhost:8080/</span>
+        <span>$ node app.js</span>
+
+        <p>This command will run app.js and now we have fully functioning server which can respond to 
+            our request:
+        </p>
+
+        <span>localhost:8080/</span>
+    </div>
 </body>
 </html>

@@ -5,35 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 4</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="styleForLessons.css">
 </head>
 <body>
-    <h1>Welcome to Lesson 4</h1>
+    <h1 class="header">Welcome to "Lesson 4"</h1>
 
-    <ul>
-        <li>
-            <a href="./home.html">Home</a>
-        </li>
-        <li>
-            <a href="./lesson_1.html">Lesson 1</a>
-        </li>
-        <li>
-            <a href="./lesson_2.html">Lesson 2</a>
-        </li>
-        <li>
-            <a href="./lesson_3.html">Lesson 3</a>
-        </li>
-        <li>
-            <a href="./lesson_4.html">Lesson 4</a>
-        </li>
-        <li>
-            <a href="./lesson_5.html">Lesson 5</a>
-        </li>
-        <li>
-            <a href="./lesson_6.html">Lesson 6</a>
-        </li>
-    </ul>
+    <div class="navigation-menu">
+        <ul>
+            <li>
+                <a class="border-button" href="./home.html">Home</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_1.html">Lesson 1</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_2.html">Lesson 2</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_3.html">Lesson 3</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_4.html">Lesson 4</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_5.html">Lesson 5</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_6.html">Lesson 6</a>
+            </li>
+        </ul>
+    </div>
 
+    <div class="text-body">
     <h3>Functional approaches</h3>
     <p>There are numerous ways to iterate through, look inside or perform other type of data manipulation on array.
         We have learned about most effective ways, which are called FUNCTIONAL APPROACHES or FUNCTIONAL PROGRAMMING.
@@ -43,7 +46,7 @@
         Firstly let's make an array: 
     </p>
 
-    <pre>const exampleArray = [1, 2, 3, 4, 5];</pre>
+    <pre class="short-pre-l4">const exampleArray = [1, 2, 3, 4, 5];</pre>
 
     <p>Basic way of iterating:</p>
     <pre>
@@ -64,7 +67,7 @@
     </pre>
 
     <h3>How to send HTML code within Get Response</h3>
-    <p>As we have covered setting up Express app in <a href="./lesson_2.html">Lesson_2</a> we won't be 
+    <p>As we have covered setting up Express app in <a class="link-in-text" href="./lesson_2.html">Lesson_2</a> we won't be 
         covering it now. You already know how to set up the Express app. Here is the method which shows
         how to pass HTML code inside of an Http Get Response.
     </p>
@@ -78,10 +81,10 @@
     </pre>
 
     <h3>Interacting with Web Search Query</h3>
-    <pre>Web Search Query is a query which was inputed by user and it specifies for which information should PC look. 
+    <p>Web Search Query is a query which was inputed by user and it specifies for which information should PC look. 
         As user inputs some information, we might need that information so we can perform further data collecting. We'll 
         now take a look into how to collect search query.
-    </pre>
+    </p>
 
     <pre>
         app.get("/search", (req, res) => {
@@ -91,9 +94,7 @@
 
     <p>If we run our app.js, and go to web browser, search for <strong>localhost:8080/search</strong> we would get following output:</p>
 
-    <pre>
-        searchquery: /search
-    </pre>
+    <pre class="short-pre-l4">searchquery: /search</pre>
 
     <h3>Interacting with Path Variables</h3>
     <p>Path parameters are also one kind of filtering and searching queries. They come after the Search Query in the URL 
@@ -112,7 +113,7 @@
         we would get following output on new page: 
     </p>
 
-    <span>msgForClient: "Hello there"</span>
+    <pre class="short-pre-l4">msgForClient: "Hello there"</pre>
 
     <h3>Post HTTP Method</h3>
     <p>Post Http Method is a method which is used when we want to create an Entity. It is more trick then Get,
@@ -137,5 +138,6 @@
         and press button "Send" which is blue. After that, we can head to the browser and search for <strong>localhost:8080/cars</strong> . 
         It will then give us an array of cars with a newly made care inside of it.
     </p>
+</div>
 </body>
 </html>

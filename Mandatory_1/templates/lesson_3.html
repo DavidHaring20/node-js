@@ -5,35 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 3</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="styleForLessons.css">
 </head>
 <body>
-    <h1>Welcome to Lesson 3</h1>
+    <h1 class="header">Welcome to "Lesson 3"</h1>
 
-    <ul>
-        <li>
-            <a href="./home.html">Home</a>
-        </li>
-        <li>
-            <a href="./lesson_1.html">Lesson 1</a>
-        </li>
-        <li>
-            <a href="./lesson_2.html">Lesson 2</a>
-        </li>
-        <li>
-            <a href="./lesson_3.html">Lesson 3</a>
-        </li>
-        <li>
-            <a href="./lesson_4.html">Lesson 4</a>
-        </li>
-        <li>
-            <a href="./lesson_5.html">Lesson 5</a>
-        </li>
-        <li>
-            <a href="./lesson_6.html">Lesson 6</a>
-        </li>
-    </ul>
+    <div class="navigation-menu">
+        <ul>
+            <li>
+                <a class="border-button" href="./home.html">Home</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_1.html">Lesson 1</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_2.html">Lesson 2</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_3.html">Lesson 3</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_4.html">Lesson 4</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_5.html">Lesson 5</a>
+            </li>
+            <li>
+                <a class="border-button" href="./lesson_6.html">Lesson 6</a>
+            </li>
+        </ul>
+    </div>
 
+    <div class="text-body">
     <h3>Strict mode</h3>
     <p>It is a way to opt-in into stricter variant of Javascript, therefore exiting out of "sloppy mode". 
         It is important to now that it is not subset of JavaScript, but it has different semantics. Some 
@@ -41,7 +44,7 @@
         Use statement below at the beginning of the file to use strict mode.
     </p>
 
-    <pre>"use strict";</pre>
+    <pre class="short-pre-l3">"use strict";</pre>
 
     <h3>Variable declaration</h3>
     <p>Variable declaration can be done in 4 different ways. </p>
@@ -150,23 +153,25 @@
     <h3>Nodemon, what is it and what is it used for ?</h3>
     <p>nodemon is a tool that makes developing Node.js applications easier by continuously looking at the project folder
         and detecting changes. When he detects a change, it immediately stops the run of some file and re-runs it. By doing so, it ensures that the 
-        current running version of our file is latest and contains of the all changes. When we are working with nodemon, we have 3 options:
+        current running version of our file is latest and contains of the all changes. When we are working with nodemon, we have 3 options: <br>
         - install only for this project 
-        <span>$ npm install --save-dev nodemon</span>
+        <br><span>$ npm install --save-dev nodemon</span><br>
 
         - install globaly in system so it can be used for any and all projects 
-        <span>$ npm install -g nodemon</span>
+        <br><span>$ npm install -g nodemon</span><br>
 
         - use dependency without installing nodemon 
-        npx nodemon &lt;file_name&gt;
+        npx nodemon &lt;file_name&gt;<br><br>
 
-        To stop the nodemon re-running file, just press:
-        <span>Ctrl + C</span>
+        To stop the nodemon re-running file, just press: <br>
+        <span>Ctrl + C</span><br>
     </p>
 
     <h3>Semantic Versioning</h3>
     <p>Semantic Versioning is a versioning scheme for using meaningful version numbers (that's why it is cal
         led Semantic Versioning). Specifically, the meaning revolves around how API versions compare in terms 
-        of backwards-compatibility.</p>
+        of backwards-compatibility.
+    </p>
+    </div>
 </body>
 </html>

@@ -76,6 +76,7 @@ p {
 pre {
     background-color: var(--color-span);
     font-size: 15px;
+    margin: 20px 0px 100px 0px;
 }
 
 span {
@@ -97,7 +98,18 @@ span {
     font-family: var(--headers-font);
 }
 
+.link-in-text {
+    font-size: 18;
+    color: var(--color-primary);
+}
 .text-body {
     margin: 100px 20%;
 }
 
+.short-pre-l3 {
+    width: 15%;
+}
+
+.short-pre-l4 {
+    width: 35%;
+}
