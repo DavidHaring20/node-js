@@ -16,7 +16,7 @@
                 <a class="border-button" href="./home.html">Home</a>
             </li>
             <li>
-                <a class="border-button" href="./lesson_1.html">Lesson 1</a>
+                <a class="current" href="./lesson_1.html">Lesson 1</a>
             </li>
             <li>
                 <a class="border-button" href="./lesson_2.html">Lesson 2</a>
@@ -78,99 +78,103 @@
                     const result = parseFloat(numberOne) + parseFloat(numberTwo);<br>
                     console.log(result);
 
-                    // Expected output: 3.40
-                </pre>
+                    // Expected output: 3.40</pre>
             </div>
 
             <div class="exercise"></div>
             <strong>Exercise - Define an object</strong>
-            <pre>
+            <div>
+                <pre>
                 const myObject = {
                     "name" : "David",
                     "age" : 20  
                 }
                 console.log("I am " + myObject.name + " and I am " + myObject.age + " years old.");
                 
-                // Expected output: I am David and I am 20 years old.
-            </pre> 
+                // Expected output: I am David and I am 20 years old.</pre> 
+            </div>
         
             <div class="exercise"></div>
             <strong>Exercise - Add a property</strong>
+            <div>
             <pre>
                 const stackOverflow = {};
                 stackOverflow.isAllowed = true;
                 console.log(stackOverflow.isAllowed);
 
-                // Expected output: true
-            </pre>
+                // Expected output: true</pre>
+            </div>
 
             <div class="exercise"></div>
             <strong>Exercise - Remove a property</strong>
-            <pre>
-                const thisSong = {
-                    "description": "The best song in the world."
-                }
-                delete thisSong.description;
-                console.log(thisSong.description);
+                <div>
+                    <pre>
+                    const thisSong = {
+                        "description": "The best song in the world."
+                    }
+                    delete thisSong.description;
+                    console.log(thisSong.description);
 
-                // Expected output: undefined
-            </pre>
+                    // Expected output: undefined</pre>
+                </div>
 
             <div class="exercise"></div>
             <strong>Exercise - Populate Array</strong>
-            <pre>
-                const friends = [];
-                friends.push("Joe");
-                friends.push("Johny");
-                friends.push("Jack");
-                friends.push("Julius");
-                console.log(friends);
+            <div>
+                <pre>
+                    const friends = [];
+                    friends.push("Joe");
+                    friends.push("Johny");
+                    friends.push("Jack");
+                    friends.push("Julius");
+                    console.log(friends);
 
-                // Expected output: [ 'Joe', 'Johny', 'Jack', 'Julius' ]
-            </pre>
+                    // Expected output: [ 'Joe', 'Johny', 'Jack', 'Julius' ]</pre>
+            </div>
 
             <div class="exercise"></div>
             <strong>Exercise - Get the index of the first occurence of some value</strong>
-            <pre>
-                const significantMathNumbers = [0, 2.718, 3.14159, 1729];
-                console.log(significantMathNumbers.indexOf(1729));
+            <div>
+                <pre>
+                    const significantMathNumbers = [0, 2.718, 3.14159, 1729];
+                    console.log(significantMathNumbers.indexOf(1729));
 
-                // Expected output: 3
-            </pre>
+                    // Expected output: 3</pre>
+            </div>
 
             <div class="exercise"></div>
             <strong>Exercise - For loop</strong>
-            <pre>
-                const numbers  = [5, 3, 2, 7, 11, 12, 0, -20, 6];
-                const discardedNumbers = [];
+                <div>
+                    <pre>
+                        const numbers  = [5, 3, 2, 7, 11, 12, 0, -20, 6];
+                        const discardedNumbers = [];
 
-                for (let i = 0; i < numbers.length; i++) {
-                    
-                    let number = numbers[i];
-                    
-                    if (number < 0 || number > 6) {
-                        console.log(number);
-                    } else {
-                        discardedNumbers.push(number)
-                    }
-                }
-                console.log("Discarded numbers: " + discardedNumbers); 
+                        for (let i = 0; i < numbers.length; i++) {
+                            
+                            let number = numbers[i];
+                            
+                            if (number < 0 || number > 6) {
+                                console.log(number);
+                            } else {
+                                discardedNumbers.push(number)
+                            }
+                        }
+                        console.log("Discarded numbers: " + discardedNumbers); 
 
-                // Expected output: 7 11 12 -20
-                                    Discarded numbers: 5,3,2,0,6
-            </pre>
-
+                        // Expected output: 7 11 12 -20
+                                            Discarded numbers: 5,3,2,0,6</pre>
+                </div>
             <h3>How do you start Node.js ?</h3>
 
             <p>Let's say that this is the look of our folder.</p>
 
-            <pre>
-                /path/to/- dir0  
-                        |- dir1
-                        |- dir2 - myJsFile.js
-                        |- dir3 
-            </pre>
-
+                <div>
+                    <pre>
+                    /path/to/- dir0  
+                            |- dir1
+                            |- dir2 - myJsFile.js
+                            |- dir3</pre>
+                </div>
             <p>If we would like to run our file(myJsFile.js), we firstly need to get into that directory.</p>
 
             <span><i> cd /path/to/dir2</i></span>

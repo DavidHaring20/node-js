@@ -31,7 +31,7 @@
                 <a class="border-button" href="./lesson_5.html">Lesson 5</a>
             </li>
             <li>
-                <a class="border-button" href="./lesson_6.html">Lesson 6</a>
+                <a class="current" href="./lesson_6.html">Lesson 6</a>
             </li>
         </ul>
     </div>
@@ -139,8 +139,7 @@
             animes.push(newAnime);
             
             res.send({ data: newAnime});
-        });
-    </pre>
+        });</pre>
 
     <h3>DELETE Http Method</h3>
     <p> DELETE Http Method is a method which is used when we want to delete some entity/resource. 
@@ -154,9 +153,7 @@
             const deletedAnime = animes.find(anime => anime.id === id);
             animes = animes.filter(anime => anime.id !== id);
             
-            res.send({ deletedAnime });
-        });
-    </pre>
+            res.send({ deletedAnime });</pre>
 
     <h3>PATCH Http Method</h3>
     <p> PATCH Http Method is a method which is used when we want to update only part of the resource/entity. The 
@@ -174,8 +171,7 @@
             });
         
             res.send({ message: "updated" });
-        });
-    </pre>
+        });</pre>
 </div>
 </body>
 </html>

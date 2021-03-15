@@ -25,7 +25,7 @@
                 <a class="border-button" href="./lesson_3.html">Lesson 3</a>
             </li>
             <li>
-                <a class="border-button" href="./lesson_4.html">Lesson 4</a>
+                <a class="current" href="./lesson_4.html">Lesson 4</a>
             </li>
             <li>
                 <a class="border-button" href="./lesson_5.html">Lesson 5</a>
@@ -54,8 +54,7 @@
             console.log(exampleArray.lenght[i]);
         }
 
-        // Expected output: 1, 2, 3, 4, 5
-    </pre>
+        // Expected output: 1, 2, 3, 4, 5</pre>
 
     <p>Functional way of iterating:</p>
     <pre>
@@ -63,8 +62,7 @@
             console.log(ex);   
         });
 
-        // Expected output: 1, 2, 3, 4, 5
-    </pre>
+        // Expected output: 1, 2, 3, 4, 5</pre>
 
     <h3>How to send HTML code within Get Response</h3>
     <p>As we have covered setting up Express app in <a class="link-in-text" href="./lesson_2.html">Lesson_2</a> we won't be 
@@ -77,8 +75,7 @@
             res.send(
                 "<strong>Hello from Get Response !</strong>"
             );
-        });
-    </pre>
+        });</pre>
 
     <h3>Interacting with Web Search Query</h3>
     <p>Web Search Query is a query which was inputed by user and it specifies for which information should PC look. 
@@ -89,8 +86,7 @@
     <pre>
         app.get("/search", (req, res) => {
             res.send({ searchquery: req.query });
-        });
-    </pre>
+        });</pre>
 
     <p>If we run our app.js, and go to web browser, search for <strong>localhost:8080/search</strong> we would get following output:</p>
 
@@ -130,8 +126,7 @@
             cars.push(car1);
         
             res.redirect("/cars");
-        });
-    </pre>
+        });</pre>
 
     <p>Now that we have our Post method in place, we need to run our app.js and enter the Postman.
         There we need switch from GET to POST and enter this link in the text box: <strong>localhost:8080/cars/Peugeot</strong>

@@ -28,7 +28,7 @@
                 <a class="border-button" href="./lesson_4.html">Lesson 4</a>
             </li>
             <li>
-                <a class="border-button" href="./lesson_5.html">Lesson 5</a>
+                <a class="current" href="./lesson_5.html">Lesson 5</a>
             </li>
             <li>
                 <a class="border-button" href="./lesson_6.html">Lesson 6</a>
@@ -51,16 +51,14 @@
                 "color": "black", 
                 "length": "15cm",
                 "venomous": "true"
-            }
-        </pre>
+            }</pre>
 
         <p>Now that we have .json file which has some data, now we can read from it.</p>
         <pre>
             const scorpion = require("path/to/scorpion.json");
             console.log(scorpion);
 
-            // Expected output: { name: 'Johny', color: 'black', length: '15cm', venomous: 'true' }
-        </pre>
+            // Expected output: { name: 'Johny', color: 'black', length: '15cm', venomous: 'true' }</pre>
 
         <h3>Http Methods</h3>
         <p>We have covered 5 main Http methods: GET, POST, DELETE, PUT and PATCH.
@@ -89,8 +87,7 @@
                 } else {
                     console.log("Server is running on port", 8080);
                 }
-            });
-        </pre>
+            });</pre>
 
         <p>This new app.listen will ensure that we get some output in the console if the run was successfull or if the run 
             crashed. If it crashed, it will give us the error or if it was successfull we will get something alongside these lines: 
@@ -101,7 +98,7 @@
 
 
         <h3>Serving the HTML files with Express</h3>
-        <p>To achieve this, firsly we need 2 things: fully function server which was previously set up and "__dirname". 
+        <p>To achieve this, firtsly we need 2 things: fully function server which was previously set up and "__dirname". 
             Setting up the server is made in __ steps. Firstly create package.json, then add dependency, package name and version number.
             Then npm install it. Then create app.js and import express from node_modules. Then set app to use express and turn on the server. 
         </p>
@@ -122,7 +119,7 @@
         <p>If we would use the "__dirname" in myFile.js, we would get that the "__dirname" is equal to this: </p>
         
         <div class="span-in-div">
-            <span>path/to/flder/folder2/myProjectFolder</span>
+            <span>path/to/folder/folder2/myProjectFolder</span>
         </div>
 
         <p>Now, once we understand __dirname, we can move to an actual serving of Html pages.</p>
@@ -133,8 +130,7 @@
         <pre>
             app.get("/", (req, res) => {
                 res.sendFile(__dirname + "/myFile.js");
-            });
-        </pre>
+            });</pre>
 
         <p>We can then run the app.js and go to <strong>localhost:8080</strong> and we will get am HTML page.</p>
     </div>

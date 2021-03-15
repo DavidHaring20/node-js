@@ -19,7 +19,7 @@
                 <a class="border-button" href="./lesson_1.html">Lesson 1</a>
             </li>
             <li>
-                <a class="border-button" href="./lesson_2.html">Lesson 2</a>
+                <a class="current" href="./lesson_2.html">Lesson 2</a>
             </li>
             <li>
                 <a class="border-button" href="./lesson_3.html">Lesson 3</a>
@@ -44,14 +44,16 @@
             "function" keyword, name of the function, list of parameters and of a function body. Function body can consist 
             of some statements and all of those statements must be wrapped in curly brackets {} 
         </p>
-        <pre>
+
+        <div>
+            <pre>
             function myFirstFunction() {
                 return "Hello World.";
             }
             console.log(myFirstFunction);
             
-            // Expected output: Hello World.
-        </pre>
+            // Expected output: Hello World</pre>
+        </div>
 
         <h3>Function which can take arguments</h3>
         
@@ -59,17 +61,18 @@
             can be accessed throughout the function.
         </p>
         
-        <pre>
-            const number1 = 2;
-            const number2 = 5;
+        <div>
+            <pre>
+                const number1 = 2;
+                const number2 = 5;
 
-            function summTwoNumbers(x, y) {
-                return x + y; 
-            }
-            console.log(summTwoNumbers(number1, number2));
+                function summTwoNumbers(x, y) {
+                    return x + y; 
+                }
+                console.log(summTwoNumbers(number1, number2));
 
-            // Expected output: 7
-        </pre>
+                // Expected output: 7</pre>
+        </div>
 
         <h3>Callback functions</h3>
 
@@ -91,8 +94,7 @@
 
             console.log(interact(poke, nameOfPerson););
 
-            // Expected output: Poke Johny
-        </pre>
+            // Expected output: Poke Johny</pre>
 
         <p>After we have talked and learned about Functions, we have had introduction to Express and Http Methods.</p>
 
@@ -128,8 +130,7 @@
                 "key": {
                     "package_name": "version"
                 }
-            }
-        </pre>
+            }</pre>
 
         <p>But, if we would want to have Express app, our .json file needs to look similar to this:</p>
 
@@ -138,8 +139,7 @@
                 "dependencies": {
                     "express": "^4.17.1"
                 }
-            }
-        </pre>
+            }</pre>
 
         <p>Once we have set up our .json file like this, we can head to the terminal and enter in the same folder where is that
             .json file. We now need to install the Express dependency or we can install more dependencies if we wish or if we have 
@@ -163,8 +163,7 @@
 
             // Functional code goes here
 
-            app.listen(8080);
-        </pre>
+            app.listen(8080);</pre>
 
         <p>There are few different and new things here. Firstly, we need Express so we declare it as const and import it.
             We do it in the first line of code. When we say "require("express")", PC will look inside of "node_modules" folder
@@ -180,8 +179,7 @@
         <pre>
         app.get("/", (req, res) => {
             res.send({message: "First call to /" });
-        });
-        </pre>
+        });</pre>
 
         <p>Now our code looks like this:</p>
         
@@ -193,8 +191,7 @@
                 res.send({message: "First call to /" });
             });
 
-            app.listen(8080);
-        </pre>
+            app.listen(8080);</pre>
 
         <p>Now we just need to run our app.js. We do it by entering into the folder where the app.js is and writing folllowing
             command:

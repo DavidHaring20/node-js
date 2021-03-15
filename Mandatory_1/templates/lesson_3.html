@@ -22,7 +22,7 @@
                 <a class="border-button" href="./lesson_2.html">Lesson 2</a>
             </li>
             <li>
-                <a class="border-button" href="./lesson_3.html">Lesson 3</a>
+                <a class="current" href="./lesson_3.html">Lesson 3</a>
             </li>
             <li>
                 <a class="border-button" href="./lesson_4.html">Lesson 4</a>
@@ -52,8 +52,8 @@
         const variable1 = 1;
         let variable2 = 2;
         var variable3 = 3;
-        variable4 = 4;
-    </pre>
+        variable4 = 4;</pre>
+
     <p>As it can be done in 4 different ways, the functionality changes in different declaration methods.
         As a rule of thumb, it is advised to use "let" as much as possible compared to "var". "let" variables can be updated, but can't 
         be re-declared. "var" variables can be updated and re-declared. "const" variables can't be updated or re-declared. "const" is 
@@ -62,8 +62,7 @@
 
     <h3>Are Objects immutable in JavaScript ?</h3>
     <p>Objects are mutable unless we use Object.freeze() functionality on them.</p>
-    <pre> 
-        const myMutableObject {
+    <pre>const myMutableObject {
             attribute: "not changed"
         }
         console.log(myMutableObject.attribute);
@@ -71,12 +70,10 @@
         console.log(myMutableObject.attribute);
 
         // Expected output: not changed
-                            changed
-    </pre>
+                            changed</pre>
 
     <p>However, if we would like to make our objects immutable, we need to use Object.freeze().</p>
-    <pre>
-        myImmutableObject = Object.freeze({
+    <pre>myImmutableObject = Object.freeze({
             attribute: "not changed"
         });
         console.log(myImmutableObject.attribute);
@@ -84,8 +81,7 @@
         console.log(myImmutableObject.attribute);
 
         // Expected output: not changed
-                            not changed
-    </pre>
+                            not changed</pre>
 
     <h3>Scopes</h3>
     <p>JavaScript scope determines the availability/accesibility and visibility of our variables.
@@ -100,11 +96,10 @@
         }
         console.log(variable1);
 
-        // Expected output: abc
-    </pre>
+        // Expected output: abc</pre>
 
     <h3>Type Coercion</h3>
-    <p>Type Coeercion is process of converting value from one type to another. All types (primitive or objects)
+    <p>Type Coercion is process of converting value from one type to another. All types (primitive or objects)
         can be subjects of coercion.
     </p>
     <pre>
@@ -115,8 +110,7 @@
         console.log(variableA, variableB);
 
         // Expected output: NaN
-                            undefined undefined
-    </pre>
+                            undefined undefined</pre>
 
     <h3>Problem when we use "var" inside of For-Loop</h3>
     <p>As we said before, there are 3 ways to declare a variable. We need to declare a variable 
@@ -136,8 +130,7 @@
             }, 1000);
         }
 
-        // Expected output: 1 2 3 4 5 6 7 8 9
-    </pre>
+        // Expected output: 1 2 3 4 5 6 7 8 9</pre>
 
     <pre>
         for (var i = 0; i < 10; i++) {
@@ -147,8 +140,7 @@
             }, 1000);
         }
 
-        // Expected output: 9 9 9 9 9 9 9 9 9
-    </pre>
+        // Expected output: 9 9 9 9 9 9 9 9 9</pre>
 
     <h3>Nodemon, what is it and what is it used for ?</h3>
     <p>nodemon is a tool that makes developing Node.js applications easier by continuously looking at the project folder
