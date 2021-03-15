@@ -111,6 +111,15 @@ p {
     background-color: var(--color-primary);
 }
 
+.current {
+    border-right: 2px solid grey;
+    border-left: 2px solid grey;
+}
+
+.current:hover {
+    background-color: grey;
+}
+
 .move-down {
     align-items: center;
     margin-top: 50px;
