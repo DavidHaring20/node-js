@@ -113,3 +113,15 @@ span {
 .short-pre-l4 {
     width: 35%;
 }
+
+.short-pre-l5 {
+    width: 40%;
+}
+
+.span-in-div {
+    margin: 10px 0 30px 0;
+}
+
+.extra-space-bottom {
+    margin-bottom: 50px;
+}
