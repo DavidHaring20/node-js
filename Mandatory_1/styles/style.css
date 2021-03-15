@@ -47,11 +47,13 @@ p {
 .logo-picture {
     width: 40%;
     height: 40%;
+    margin-left: 150px;
 }
 
 .img-logo-lesson-3 {
     width: 90%;
     height: 90%;
+    margin-left: 70px;
 }
 
 .text-body div {
@@ -80,8 +82,7 @@ p {
     align-items: center;
     display: flex;
     flex-direction: column;
-
-    
+    width: 572.5px;
 }
 
 .lessons {
@@ -108,4 +109,25 @@ p {
 
 .border-button:hover {
     background-color: var(--color-primary);
+}
+
+.move-down {
+    align-items: center;
+    margin-top: 50px;
+}
+
+.minimize {
+    width: 80%;
+    height: 80%;
+    margin-left: 105px; 
+}
+
+.stretch-div {
+    width: 100%;
+}
+
+.double-columns {
+    display: flex;
+    flex-direction: row;
+    flex: 2 1 auto;
 }
