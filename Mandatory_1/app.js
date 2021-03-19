@@ -31,9 +31,9 @@ app.get("/lesson_6", (req, res) => {
     res.sendFile(__dirname + "/templates/lesson_6.html");
 });
 
-// app.get("/lesson_7", (req, res) => {
-//     res.sendFile(__dirname + "/templates/lesson_7.html");
-// });
+app.get("/lesson_7", (req, res) => {
+    res.sendFile(__dirname + "/templates/lesson_7.html");
+});
 
 app.listen(8080, (error) => {
     if (error) {
