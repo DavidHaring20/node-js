@@ -125,6 +125,12 @@ p {
     margin-top: 50px;
 }
 
+.move-left {
+    width: 80%;
+    height: 80%;
+    margin: 0 105px 0 0;
+}
+
 .minimize {
     width: 80%;
     height: 80%;
