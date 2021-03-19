@@ -38,5 +38,68 @@
             </li>
         </ul>
     </div>
+
+    <div class="text-body">
+        <div>
+            <h3>Res.send() produces errors about headers</h3>
+            <p>You are here because you probably got something like this <span>Cannot set headers after they are sent to the client</span> error. 
+                That happens because you have sent 2 times in the same app.get() method. One of the probable errors could lie in your IF statement. <br>
+                Example of an IF statements: 
+            </p>
+            <pre>
+                if (condition) {
+                    res.send(1);
+                }
+                res.send(2);</pre>
+            <p>If the condition is true, the the res.send(1) will be executed. And as the compiler goes towards bottom it will executed res.send(2).
+                If that happens you will get error and a crash. <br>
+                Much wiser approach would be to ensure that if the condition is true that it only executes res.send(1). <br>
+                Example: 
+            </p>
+            <pre>
+                if (condition) {
+                    return res.send(1);
+                }
+                res.send(2);</pre>
+
+
+            <h3>What is jQuery ?</h3>
+            <p> JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation
+                and Ajax. It is free, open-source software using the permissive MIT License which makes it highly reliable and accessible.
+            </p>
+
+            <h3>What is "req.query" and what it consists of ?</h3>
+            <p>
+                "req.query" is a property that is an object containing a property for each query string parameter in the route. When QUERY PARSER is set to disabled, 
+                it is an empty object {}, otherwise it is the result of the configured query parser.
+                Each query object is composed of two elemements: <br>
+                - key <br>
+                - value <br>
+                In the following example: <br>
+                <span> localhost:8080/search?q=tobbi+ferret </span><br>
+                "search" is a key, and tobbi+ferret is a value.
+            </p>
+
+            <h3>express.static(root, [options])</h3>
+            <p>It is a built in middleware function in Express. It serves static files and is based on "serve-static"(an npm module).
+                The root argument specifies the directory from where it should serve static files. Let's say that we have a directories called: 
+                "assets" for pictures and "styles" for CSS stylesheets. If we would need the server to serve them then we need to configure it like 
+                the following: <br>
+            </p>
+            <pre>
+                app.use(express.static('assets'));
+                app.use(express.static('styles'));</pre>
+
+            <h3>Client server model</h3>
+            <p>Client server model describes how server provides resources to one or more clients. Types of servers: web servers, mail servers and file servers.
+                Types of clients: desktop computers, laptops, tablets and smartphones.
+            </p>
+
+            <h3>Content Delivery Network (CDN)</h3> 
+            <p>Content Delivery Network is a geographically distributed network of proxy servers and their data centers. The goal is to provide high availability 
+                and performance by distributing the service spatially relative to end users.
+            </p>
+        </div>
+    </div>
 </body>
 </html>

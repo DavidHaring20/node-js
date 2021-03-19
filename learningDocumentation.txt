@@ -180,5 +180,46 @@ stuff which I am not very knowledgeable of. During the lesson 6 we have covered 
 
     // Expected result: ["exuberant", "destruction", "present"]
 
+LESSON 7 
+During the lesson 7 we have covered return in if methods, how to deal with "Cannot set headers after they are sent to the client", 
+req.query, key in req.query, App.use(express.static()), jQuery, CDN 
+
+• return statement in if statements = If we have some simple if statement that in case 1 gives something and in case 2 gives something else,
+    we are pretty used to doing this:
+
+    if (condition) {
+        res.send(1);
+    }
+    res.send(2);
+
+    But in case of res.send, there is a problem that will occur. "Cannot set headers after they are sent to the client" will be thrown.
+    To deal with that we must ensure that only once after the condition is made, res.send is being executed.
+
+    if (condition) {
+        return res.send(1);
+    }
+    res.send(2);
+
+• jQuery = JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation
+     and Ajax. It is free, open-source software using the permissive MIT License which makes it highly reliable and accessible.
+
+• req.query = property that is an object containing a property for each query string parameter in the route. When QUERY PARSER is set to disabled, 
+    it is an empty object {}, otherwise it is the result of the configured query parser.
+    Each query object is composed of two elemements: 
+    - key
+    - value 
+    In the following example: 
+    localhost:8080/search?q=tobbi+ferret
+    "search" is a key, and tobbi+ferret is a value.
+
+• express.static(root, [options]) = built in middleware function in Express. It serves static files and is based on "serve-static"(an npm module).
+    The root argument specifies the directory from where it should serve static files. 
+
+• client server model = it describes how server provides resources to one or more clients. Types of servers: web servers, mail servers and file servers.
+    Types of clients: desktop computers, laptops, tablets and smartphones.
+
+• Content Delivery Network = a geographically distributed network of proxy servers and their data centers. The goal is to provide high availability 
+    and performance by distributing the service spatially relative to end users.
+
 
     
