@@ -1,4 +1,5 @@
 console.log("Hello from the jquery.js");
+let reasonCount = 4;
 
 // 1. Change the body tag so that everything on the page is centered.
 $('body').css({
@@ -48,3 +49,24 @@ $('ul>p').prepend( "<p>First Sentence</p>" );
 
 // 14. You can finally change the class name of unused-box to used-box.
 $('.unused-box').attr('unused-box', 'used-box');
+
+// 15. Let's additionally add a class name on the box called used-boxed-clicked.
+// Every time the box is clicked it should toggle this class (add if not there or remove if there).
+
+// 16. On mousing over the submit-button add a title property that says "You're ready to click." Remove the text when the mouse isn't over the button anymore.
+$("#submit-button").hover(function(){
+    $(this).text("Ready to click");
+    }, function(){
+    $(this).text("Click");
+});
+
+// 17. On mouse click add a reason to the ordered list. The reason should start from Reason 4 and count up after every click.
+$('ol').click(function() {
+    $('ol>li').last().append( "<li>Reason " + reasonCount + "</li>" );
+    reasonCount++;
+});
+
+// 18. Console log the parent div when the button is clicked using a direct reference to the button inside of the event handler scope.
+$('#submit-button').click(function() {
+    console.log($(this).parent().attr('class'));
+});
