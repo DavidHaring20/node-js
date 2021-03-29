@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Cat Facts</title>
+</head>
+<body>
+    <h1>Random Cat Fact</h1>
+
+    <div id="cat-fact" class="cat-fact"></div>
+    
+    <script>
+        // USING FETCH TO GET RESOURCE AND PRINT IT TO THE CONSOLE
+        // fetch('https://catfact.ninja/fact?max_length=140')
+        // .then(res => res.json())
+        // .then(data => console.log(data));
+
+        // USE FETCH TO GET RESOURCE AND DISPLAY IT TO THE PAGE BY USING document.getElementById
+        // fetch('https://catfact.ninja/fact')
+        // .then(res => res.json())
+        // .then(data => {
+        //     const catFactDiv = document.getElementById('cat-fact');
+        //     catFactDiv.innerText = data.fact;
+        // });
+
+        // USE FETCH TO GE RESOURCE AND DISPLAY IT TO THE PAGE BY USING document.getElementsByClassName
+        // fetch('https://catfact.ninja/fact?max_length=140')
+        // .then(res => res.json())
+        // .then(data => {
+        //     const divForCatFacts = document.getElementsByClassName('cat-fact');
+        //     divForCatFacts[0].innerText = data.fact;
+        // });
+
+        // CONVERT FECTH TO CAT FACTS ASYNCHRONOUS WAIT
+        (async function() {
+            const response = await fetch('https://catfact.ninja/fact?max_length=140');
+            // console.log(response);
+            const result = await response.json();
+            // console.log(result);
+            const catFactDiv = document.getElementById('cat-fact');
+            catFactDiv.innerText = result.fact;
+        })()
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+PROMISE => an object that represents eventual completion (or failure) of an asynchronous operation and its resulting value.
+    It is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an 
+    asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like 
+    synchronous methods: instead of immediately returning the final value, the asynchronous methods return a promise to supply 
+    the value at some point of the future. 
+    It has one of these states: 
+        - PENDING => initial state, neither fulfiled nor rejected 
+        - FULFILLED => meaning that the operation was completed successfully 
+        - REJECTED => meaning that the operation failed 
+    If the promise is fulfilled then it has a VALUE, otherwise if it is rejected it has a REASON. If it is fulfilled or rejected,
+    the associated handlers queued up are called. These handlers are "then".
+
+    ADVANTAGES: 
+    - Callbacks and method added to promise will never be invoked or executed before the completition of the current run 
+    - Callbacks will be invoked even if they were added AFTER the success or failure of the asynchronous operation that promise
+        represents 
+    - Multiple callbacks can be added by using THEN multiple times. They will be invoked one after another, in order they were chained
+    
+CHAINING => it occurs when two or more asynchronous operations need to be executed back to back. Each subsequent operation starts when the 
+    previous operation succeeds, with the result from previous step. This is accomplished by creating PROMISE CHAIN. 
+
+    It is possible chainining even after the failure. You can use CATCH to accomplish new actions even after an action failed in the chain. 
+
+FETCH => an API that provides interface for fetching resources. It is familiar to XMLHttpRequest, but it provides more flexible and powerful 
+    feature set.
+
+fetch => a method that takes only one argument. That argument is path to the resource you want to fetch.
+    If you know that you are fetching JSON file across the netwok, the fetch() will return a Promise containing a response. 
+    Response contains the text, but to extract it we use json().
+
+json() => method of the Body mixin takes a Response stream and reads it to completion. It returns a promise which resolves with a JavaScript 
+    object that is the result of parsing the body text as JSON. 
+
+async function() => functions that are declared async keyword. It essentially enables 2 things. First one is that 'await' keyword is enabled for use inside 
+    of that function. Second one is that it enables writing promise chains without explicitly configuring them. These 2 things combined enable to write promise 
+    based behaviour in much cleaner way.
+
+() after function declaration => After the function has been declared, you can automatically execute it without arguments by putting "()" at the end of the function.
+
+await => it causes the JavaScript runtime to pause your code on this line, not allowing further code to execute in the meantime until the async function call has returned 
+    it's result — very useful if subsequent code relies on that result!
