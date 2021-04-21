@@ -51,5 +51,5 @@ app.listen(8080, (error) => {
     if (error) {
         console.log(error);
     } 
-    console.log("App is running on port:" + 8080);
+    console.log("App is running on address --> localhost:8080/");
 });
