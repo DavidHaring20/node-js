@@ -43,6 +43,10 @@
     background-color: lightgrey;
 }
 
+.margin-top {
+    margin-top: 6rem;
+}
+
 .fill {
     background-color: green;
 }
