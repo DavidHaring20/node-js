@@ -9,6 +9,12 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Routers 
+const projectsRouter = require("./routes/projects.js");
+
+// App using Routers 
+app.use(projectsRouter.router);
+
 // Components
 const header = fs.readFileSync(__dirname + "/public/header/header.html", { encoding: "UTF-8" });
 
