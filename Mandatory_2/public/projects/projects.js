@@ -43,16 +43,20 @@
 
             const projectStartDate = document.createElement('p');
             projectStartDate.classList.add('project-start-date');
-            projectStartDate.innerText = project.projectStartDate;
+            const startDate = new Date(project.projectStartDate).toDateString();
+            projectStartDate.innerText = startDate;
 
             const projectEndDate = document.createElement('p');
             projectEndDate.classList.add('project-end-date');
-            projectEndDate.innerText = project.projectEndDate;
+            const endDate = new Date(project.projectEndDate).toDateString();
+            projectEndDate.innerText = endDate;
 
             const projectGitLink = document.createElement('a');
             projectGitLink.classList.add('project-git-link');
-            projectGitLink.innerText = "Check out on GitHub";
-            //= project.projectGitLink;
+            const linkText = document.createTextNode("Check on GitHub");
+            projectGitLink.appendChild(linkText);
+            projectGitLink.title = "Check on GitHub";
+            projectGitLink.href = project.projectGitLink;
 
             projectDiv.appendChild(projectTitle);
             projectDiv.appendChild(projectDescription);
