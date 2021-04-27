@@ -32,11 +32,36 @@
             }
             projectTechUsed.innerText = techUsed;
 
+            const projectLanguages = document.createElement('p');
+            projectLanguages.classList.add('project-languages');
+            
+            let languagesUsed = "";
+            for (lang in project.projectLanguages) {
+                languagesUsed += project.projectLanguages[lang] + ", ";
+            }
+            projectLanguages.innerText = languagesUsed;
+
+            const projectStartDate = document.createElement('p');
+            projectStartDate.classList.add('project-start-date');
+            projectStartDate.innerText = project.projectStartDate;
+
+            const projectEndDate = document.createElement('p');
+            projectEndDate.classList.add('project-end-date');
+            projectEndDate.innerText = project.projectEndDate;
+
+            const projectGitLink = document.createElement('a');
+            projectGitLink.classList.add('project-git-link');
+            projectGitLink.innerText = "Check out on GitHub";
+            //= project.projectGitLink;
 
             projectDiv.appendChild(projectTitle);
             projectDiv.appendChild(projectDescription);
             projectDiv.appendChild(projectType);
             projectDiv.appendChild(projectTechUsed);
+            projectDiv.appendChild(projectLanguages);
+            projectDiv.appendChild(projectStartDate);
+            projectDiv.appendChild(projectEndDate);
+            projectDiv.appendChild(projectGitLink);
             projectsDiv.appendChild(projectDiv);
         });
 
