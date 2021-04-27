@@ -11,46 +11,80 @@
         result.projects.map(project => {
             const projectDiv = document.createElement('div');
             
+            // Project title 
             const projectTitle = document.createElement('h3');
             projectTitle.classList.add('project-title');
             projectTitle.innerText = project.projectTitle;
 
+            // Project description
             const projectDescription = document.createElement('p');
             projectDescription.classList.add('project-description');
             projectDescription.innerText = project.projectDescription;
 
+            // Project type
             const projectType = document.createElement('p');
             projectType.classList.add('project-type');
             projectType.innerText = project.projectType;
 
+            // Project tech used
             const projectTechUsed = document.createElement('p');
             projectTechUsed.classList.add('project-tech-used');
             
+            // let techUsed = "";
+            // for (tech in project.projectTechUsed) {
+            //     techUsed += project.projectTechUsed[tech] + "\n";
+            // }
+            // projectTechUsed.innerText = techUsed;
+
+            let lengthForTech = 0;
+            for (tech in project.projectTechUsed) {
+                lengthForTech++;
+            }
+
             let techUsed = "";
             for (tech in project.projectTechUsed) {
-                techUsed += project.projectTechUsed[tech] + "\n";
+                techUsed += project.projectTechUsed[tech];
+                lengthForTech--;
+
+                if (lengthForTech > 0) {
+                    techUsed += " | ";
+                }
             }
             projectTechUsed.innerText = techUsed;
 
+            // Project languages
             const projectLanguages = document.createElement('p');
             projectLanguages.classList.add('project-languages');
             
+            let lengthForLanguages = 0;
+            for (lang in project.projectLanguages) {
+                lengthForLanguages++;
+            }
+
             let languagesUsed = "";
             for (lang in project.projectLanguages) {
-                languagesUsed += project.projectLanguages[lang] + ", ";
+                languagesUsed += project.projectLanguages[lang];
+                lengthForLanguages--;
+
+                if (lengthForLanguages > 0) {
+                    languagesUsed += ", ";
+                }
             }
             projectLanguages.innerText = languagesUsed;
 
+            // Project start date
             const projectStartDate = document.createElement('p');
             projectStartDate.classList.add('project-start-date');
             const startDate = new Date(project.projectStartDate).toDateString();
             projectStartDate.innerText = startDate;
 
+            // Project end date
             const projectEndDate = document.createElement('p');
             projectEndDate.classList.add('project-end-date');
             const endDate = new Date(project.projectEndDate).toDateString();
             projectEndDate.innerText = endDate;
 
+            // Project git link 
             const projectGitLink = document.createElement('a');
             projectGitLink.classList.add('project-git-link');
             const linkText = document.createTextNode("Check on GitHub");
