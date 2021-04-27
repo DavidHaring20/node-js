@@ -1,0 +1,33 @@
+// Test if the /api/projects worls 
+fetch("/api/projects").then(res => res.json()).then(res => console.log(res));
+
+(async function getProjectsFromApi() {
+    try {
+        const response = await fetch("/api/projects");
+        const result = await response.json();
+
+        const projectsDiv = document.getElementById('project-list');
+
+        result.projects.map(project => {
+            const projectDiv = document.createElement('div');
+            
+            const projectTitle = document.createElement('h3');
+            projectTitle.classList.add('project-title');
+            projectTitle.innerText = project.projectTitle;
+
+            const projectDescription = document.createElement('p');
+            projectDescription.classList.add('project-description');
+            projectDescription.innerText = project.projectDescription;
+
+            const 
+
+            projectDiv.appendChild(projectTitle);
+            projectDiv.appendChild(projectDescription);
+            projectsDiv.appendChild(projectDiv);
+        });
+
+
+    } catch (error) {
+        console.log(error);
+    }
+})();
