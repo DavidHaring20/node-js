@@ -1,0 +1,32 @@
+.h1-projects {
+    margin-top: 5rem;
+    margin-left: 10rem; 
+    font-size: 3rem;
+}
+
+
+.image-text-div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10rem;
+    margin-left: 10%;
+}
+
+.div-text {
+    margin-left: 5%;
+}
+
+.project-title {
+    font-size: 3.0rem;
+    margin: 0.8rem;
+}
+
+.project-description, .project-type, .project-tech-used, .project-languages, .project-start-date, .project-end-date, .project-git-link {
+    font-size: 1.5rem;
+    margin: 0.8rem;
+    width: 60ch;
+}
+
+.project-description {
+    margin-top: 3rem;
+}

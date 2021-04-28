@@ -10,6 +10,7 @@
 
         result.projects.map(project => {
             const projectDiv = document.createElement('div');
+            projectDiv.classList.add('image-text-div');
             
             // Project title 
             const projectTitle = document.createElement('h3');
@@ -98,15 +99,24 @@
             projectImageLink.setAttribute('src', project.projectImageLink);
             projectImageLink.setAttribute('alt', "Folder picture.");
 
-            projectDiv.appendChild(projectTitle);
-            projectDiv.appendChild(projectDescription);
-            projectDiv.appendChild(projectType);
-            projectDiv.appendChild(projectTechUsed);
-            projectDiv.appendChild(projectLanguages);
-            projectDiv.appendChild(projectStartDate);
-            projectDiv.appendChild(projectEndDate);
-            projectDiv.appendChild(projectGitLink);
-            projectDiv.appendChild(projectImageLink);
+            const imageDiv = document.createElement('div');
+            imageDiv.classList.add('div-image');
+
+            imageDiv.append(projectImageLink);
+            projectDiv.appendChild(imageDiv);
+            
+            const textDiv = document.createElement('div');
+            textDiv.classList.add('div-text');
+
+            textDiv.appendChild(projectTitle);
+            textDiv.appendChild(projectDescription);
+            textDiv.appendChild(projectType);
+            textDiv.appendChild(projectTechUsed);
+            textDiv.appendChild(projectLanguages);
+            textDiv.appendChild(projectStartDate);
+            textDiv.appendChild(projectEndDate);
+            textDiv.appendChild(projectGitLink);
+            projectDiv.appendChild(textDiv);
             projectsDiv.appendChild(projectDiv);
         });
 
