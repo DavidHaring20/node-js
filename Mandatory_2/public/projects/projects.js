@@ -92,6 +92,12 @@
             projectGitLink.title = "Check on GitHub";
             projectGitLink.href = project.projectGitLink;
 
+            // Project image link
+            const projectImageLink = document.createElement('img');
+            projectImageLink.classList.add('project-image');
+            projectImageLink.setAttribute('src', project.projectImageLink);
+            projectImageLink.setAttribute('alt', "Folder picture.");
+
             projectDiv.appendChild(projectTitle);
             projectDiv.appendChild(projectDescription);
             projectDiv.appendChild(projectType);
@@ -100,6 +106,7 @@
             projectDiv.appendChild(projectStartDate);
             projectDiv.appendChild(projectEndDate);
             projectDiv.appendChild(projectGitLink);
+            projectDiv.appendChild(projectImageLink);
             projectsDiv.appendChild(projectDiv);
         });
 

@@ -34,7 +34,8 @@ const projects = [
         },
         "projectStartDate": new Date("October 9, 2020"),
         "projectEndDate": new Date("November 5, 2020"),
-        "projectGitLink": "https://github.com/DavidKrtolica/DnDcykler"
+        "projectGitLink": "https://github.com/DavidKrtolica/DnDcykler",
+        "projectImageLink": "../assets/folder.jpg"
     },
     {
         "projectTitle": "Social Media App",
@@ -59,6 +60,7 @@ const projects = [
         "projectStartDate": new Date("November 15, 2020"),
         "projectEndDate": new Date("December 18, 2020"),
         "projectGitLink": "https://github.com/DavidKrtolica/SocialMediaApp",
+        "projectImageLink": "../assets/folder.jpg"
     },
     {
         "projectTitle": "Nordic Motorhome Rental",
@@ -78,7 +80,8 @@ const projects = [
         },
         "projectStartDate": new Date("July 2, 2020"),
         "projectEndDate": new Date("June 3, 2020"),
-        "projectGitLink": "https://github.com/nirenrawal/NordicMotorhomeProject"
+        "projectGitLink": "https://github.com/nirenrawal/NordicMotorhomeProject",
+        "projectImageLink": "../assets/folder.jpg"
     },
     {
         "projectTitle": "Roskilde Daycare",
@@ -99,7 +102,8 @@ const projects = [
         },
         "projectStartDate": new Date("March 19, 2020"),
         "projectEndDate": new Date("March 26, 2020"),
-        "projectGitLink": "https://github.com/mana998/RoskildeDayCare"
+        "projectGitLink": "https://github.com/mana998/RoskildeDayCare",
+        "projectImageLink": "../assets/folder.jpg"
     }
 ];
 
