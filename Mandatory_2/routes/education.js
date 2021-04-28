@@ -8,7 +8,7 @@ const router = require('express').Router();
     End Date => educationEndDate (date)
 */
 
-const education = [
+const educations = [
     {
         "educationName": "Osnovna škola Podmurvice",
         "educationDescription": "Elementary school",
@@ -30,7 +30,7 @@ const education = [
 ];
 
 router.get("/api/education", (req, res) => {
-    res.send({ education });
+    res.send({ educations });
 });
 
 

@@ -30,12 +30,6 @@
             // Project tech used
             const projectTechUsed = document.createElement('p');
             projectTechUsed.classList.add('project-tech-used');
-            
-            // let techUsed = "";
-            // for (tech in project.projectTechUsed) {
-            //     techUsed += project.projectTechUsed[tech] + "\n";
-            // }
-            // projectTechUsed.innerText = techUsed;
 
             let lengthForTech = 0;
             for (tech in project.projectTechUsed) {
