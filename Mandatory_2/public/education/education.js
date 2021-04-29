@@ -34,10 +34,14 @@
             const endDate = new Date (education.educationEndDate).toDateString();
             educationEndDate.innerText = endDate;
 
-            educationDiv.appendChild(educationName);
-            educationDiv.appendChild(educationDescription);
-            educationDiv.appendChild(educationStartDate);
-            educationDiv.appendChild(educationEndDate);
+            const educationBorderDiv = document.createElement('div');
+            educationBorderDiv.classList.add('education-border-div');
+
+            educationBorderDiv.appendChild(educationName);
+            educationBorderDiv.appendChild(educationDescription);
+            educationBorderDiv.appendChild(educationStartDate);
+            educationBorderDiv.appendChild(educationEndDate);
+            educationDiv.appendChild(educationBorderDiv);
             educationsDiv.appendChild(educationDiv);
         });
     } catch (error) {
