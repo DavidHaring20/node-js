@@ -19,3 +19,11 @@ ul {
     margin-right: 40px;
     margin-top: 45px;
 }
+
+.a-header {
+    color: black;
+}
+
+.a-header:hover {
+    color: green;
+}
