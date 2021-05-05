@@ -1,15 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:wght@700&display=swap');
+/* font-family: 'Noto Sans JP'; */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans+Condensed:wght@300&family=Roboto:wght@700&display=swap');
+/* font-family: 'Open Sans Condensed'; */
+
 .education-header {
     margin-top: 5rem;
     margin-left: 10rem; 
     font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 .education-border-div {
     margin-top: 5%;
     margin-left: 20%;
     margin-right: 20%;
-    border: 2px solid rgb(42, 158, 197);
-    background-color: lightskyblue;
+    border: 2px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,8 +26,10 @@
 
 .education-name {
     font-size: 2rem;
+    font-family: 'Noto Sans JP';
 }
 
 .education-description, .education-start-date, .education-end-date {
     font-size: 1.6rem;
+    font-family: 'Open Sans Condensed';
 }
