@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto:wght@700&display=swap');
+/* font-family: 'Noto Sans JP'; */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans+Condensed:wght@300&family=Roboto:wght@700&display=swap');
+/* font-family: 'Open Sans Condensed'; */
+
+.contact-header {
+    margin-top: 5rem;
+    margin-left: 10rem; 
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.email-body-div {
+    margin-top: 5rem;
+    margin-left: 10rem; 
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+input::placeholder {
+    font-family: 'Open Sans Condensed';
+}
+
+input {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+button {
+    margin-left: 25%;
+    width: 50%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: white;
+    font-family: 'Open Sans Condensed';
+    font-weight: bold;
+}
+
+.message-field {
+    height: 20vw;
+}
+
+.message-field::placeholder {
+    position: relative;
+    top: -45%;
+}

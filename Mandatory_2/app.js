@@ -57,7 +57,8 @@ app.get("/contact", (req,res) => {
 
 // Sending an email 
     app.post("/sendEmail", (req, res) => {
-        const name = req.body.name;
+        const firstName = req.body.firstName;
+        const lastName = req.body.lastName;
         const email = req.body.emailAddress;
         const subject = req.body.subject;
         const message = req.body.message;
