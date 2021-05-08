@@ -57,13 +57,42 @@ app.get("/contact", (req,res) => {
 
 // Sending an email 
     app.post("/sendEmail", (req, res) => {
+        // Get all user input
         const firstName = req.body.firstName;
         const lastName = req.body.lastName;
         const email = req.body.emailAddress;
         const subject = req.body.subject;
         const message = req.body.message;
-        console.log(req.body);
-        res.send();
+
+        // Generate email
+        const output = `
+            You have new e-mail from: ${firstName} ${lastName}. 
+            Subject: ${subject}
+            E-mail Body: ${message}
+
+            Sender's e-mail Address: ${email}
+        `; 
+
+        let transporter = nodemailer.createTransport({
+            host: "smtp.gmail.com",
+            port: 587,
+            secure: false, 
+            auth: {
+              user: 'test4contactpage@gmail.com', 
+              pass: 'test4contactpage123?*', 
+            },
+          });
+        
+          // send mail with defined transport object
+          let info = transporter.sendMail({
+            from: '"Node.js Contacter " <test4contactpage@gmail.com>', // sender address
+            to: "davidharingri@gmail.com", // receiver
+            subject: "Portofolio Contact me", // Subject line
+            text: output // plain text body
+          });
+        
+          console.log("Message sent: %s", output);
+        res.redirect('/contact');
     });
 
 // Setting up the server
