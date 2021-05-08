@@ -92,7 +92,7 @@ app.get("/contact", (req,res) => {
           });
         
           console.log("Message sent: %s", output);
-        res.redirect('/contact');
+        res.redirect('/');
     });
 
 // Setting up the server
