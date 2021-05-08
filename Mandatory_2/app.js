@@ -1,5 +1,6 @@
 // Imports
 const { urlencoded } = require('express');
+const nodemailer = require('nodemailer');
 const express = require('express');
 const fs = require('fs');
 const app = express();
@@ -53,6 +54,16 @@ app.get("/education", (req,res) => {
 app.get("/contact", (req,res) => {
     res.send(header + contactContent + footer);
 });
+
+// Sending an email 
+    app.post("/sendEmail", (req, res) => {
+        const name = req.body.name;
+        const email = req.body.emailAddress;
+        const subject = req.body.subject;
+        const message = req.body.message;
+        console.log(req.body);
+        res.send();
+    });
 
 // Setting up the server
 app.listen(8080, (error) => {
